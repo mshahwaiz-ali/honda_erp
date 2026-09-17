@@ -1,0 +1,5 @@
+===== ORACLE FORMS UI AUTOMATION TREE =====
+PROCESS=10436 TITLE=Computerized Accounts
+ROOT: Computerized Accounts | SunAwtFrame | ControlType.Window
+PROCESS=16544 TITLE=Computerized Accounts
+ROOT: Computerized Accounts | SunAwtFrame | ControlType.Window

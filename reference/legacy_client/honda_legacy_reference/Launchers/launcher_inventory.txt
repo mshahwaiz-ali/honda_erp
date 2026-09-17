@@ -1,0 +1,2 @@
+C:\Users\DELL\Desktop\Software.lnk | TARGET=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | ARGS=http://ca93.att-apps.com:8889/forms/frmservlet?config=HONDA_SURJANI | WORKDIR=C:\Program Files (x86)\Microsoft\Edge\Application
+C:\Users\DELL\Desktop\ali\honda_legacy_reference\Launchers\launcher_001_Software.lnk | TARGET=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe | ARGS=http://ca93.att-apps.com:8889/forms/frmservlet?config=HONDA_SURJANI | WORKDIR=C:\Program Files (x86)\Microsoft\Edge\Application

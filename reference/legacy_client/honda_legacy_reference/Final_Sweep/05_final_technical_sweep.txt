@@ -1,0 +1,51 @@
+===== HONDA / ORACLE TECHNICAL FILE SWEEP =====
+===== ROOT: C:\Users\DELL =====
+C:\Users\DELL\Desktop\Software.lnk
+C:\Users\DELL\Desktop\ali\honda_legacy_reference\Java_Deployment\deployment.properties
+C:\Users\DELL\Desktop\ali\honda_legacy_reference\Launchers\launcher_001_Software.lnk
+C:\Users\DELL\Desktop\ali\honda_legacy_reference\Launchers\launcher_002_launcher_001_Software.lnk
+===== ROOT: C:\ProgramData =====
+===== ROOT: C:\Program Files =====
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\ACTIVITY.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\APPT.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\CNFNOT.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\CNFRES.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\CONTACT.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\DISTLIST.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\DOC.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\EXITEM.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\INFOMAIL.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\IPM.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\NOTE.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\OOFTMPL.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\POST.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\POSTIT.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\RCLRPT.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\REC.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\REMOTE.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\REPLTMPL.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\REPORT.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\RESEND.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\RSSITEM.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SCHDCNCL.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SCHDREQ.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SCHDRESN.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SCHDRESP.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SCHDREST.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SECREC.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SECURE.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SHARING.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SIGN.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SMIMEE.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\SMIMES.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\TASK.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\TASKACC.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\TASKDEC.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\TASKREQ.CFG
+C:\Program Files\Microsoft Office\root\Office16\FORMS\1033\TASKUPD.CFG
+===== ROOT: C:\Program Files (x86) =====
+===== ROOT: D:\ =====
+===== DIRECTORIES NAMED HONDA / EZ_HONDA / FORMS =====
+C:\Users\DELL\Desktop\ali\honda_legacy_reference
+C:\Users\DELL\Desktop\ali\honda_legacy_reference\HONDA_SURJANI_launch.htmlecho
+===== REGISTRY HONDA / FRMSERVLET REFERENCES =====

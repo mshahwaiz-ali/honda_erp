@@ -1,0 +1,48 @@
+<HTML>
+<!-- FILE: base.htm (Oracle Forms)                                  -->
+<!--                                                                -->  
+<!-- This is the default base HTML file for running a form on the   -->
+<!-- web using a generic APPLET tag to include Forms applet.        -->
+<!--                                                                -->  
+<!-- IMPORTANT NOTES:                                               -->
+<!-- Default values for all the variables which appear below        -->
+<!-- (enclosed in percent characters) are defined in the servlet    -->
+<!-- configuration file (formsweb.cfg). It is preferable to make    -->
+<!-- changes in that file where possible, rather than this one.     -->
+<!--                                                                -->  
+<!-- This file will be REPLACED if you reinstall Oracle Forms, so   -->
+<!-- you are advised to make your own version if you want to make   -->
+<!-- want to make any modifications.  You should then set the       -->
+<!-- baseHTML parameter in the Forms Servlet configuration file     -->
+<!-- (formsweb.cfg) to point to your new file instead of this one.  -->
+<HEAD><TITLE>Consultancy Application</TITLE></HEAD>
+<BODY >
+
+<!-- Forms applet definition (start) -->
+<APPLET CODEBASE="/forms/java"
+        CODE="oracle.forms.engine.Main"
+        ARCHIVE="jacob.jar,frmall.jar,frmwebutil.jar"
+        WIDTH="100%"
+        HEIGHT="100%">
+<PARAM NAME="serverURL" VALUE="/forms/lservlet?ifcfs=/forms/frmservlet?config=HONDA_SURJANI&acceptLanguage=null">
+<PARAM NAME="networkRetries" VALUE="5">
+<PARAM NAME="serverArgs" 
+       VALUE="escapeParams=true module=D:\EZ_HONDA\MENU\LOGIN_FORM.fmx userid=  sso_userid=%20 sso_formsid=%25OID_FORMSID%25 sso_subDN= sso_usrDN= debug=no host=localhost port=8889 buffer_records=no debug_messages=no array=no obr=no query_only=no quiet=yes render=no record= tracegroup= log= term=">
+<PARAM NAME="separateFrame" VALUE="true">
+<PARAM NAME="splashScreen"  VALUE="">
+<PARAM NAME="background"  VALUE="no">
+<PARAM NAME="lookAndFeel"  VALUE="oracle">
+<PARAM NAME="colorScheme"  VALUE="blaf">
+<PARAM NAME="serverApp" VALUE="default">
+<PARAM NAME="logo" VALUE="no">
+<PARAM NAME="imageBase" VALUE="DocumentBase">
+<PARAM NAME="formsMessageListener" VALUE="">
+<PARAM NAME="recordFileName" VALUE="">
+<PARAM NAME="EndUserMonitoringEnabled" VALUE="">
+<PARAM NAME="EndUserMonitoringURL" VALUE="">
+<PARAM NAME="heartbeat" VALUE="">
+</APPLET>
+<!-- Forms applet definition (end) -->
+
+</BODY>
+</HTML>

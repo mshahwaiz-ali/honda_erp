@@ -1,0 +1,13 @@
+http://ca74.att-apps.com:8889/forms/java/frmall.jar
+http://ca74.att-apps.com:8889/forms/java/frmwebutil.jar
+http://ca74.att-apps.com:8889/forms/java/jacob.jar
+http://ca93.att-apps.com:8889/forms/java/frmall.jar
+http://ca93.att-apps.com:8889/forms/java/frmwebutil.jar
+http://ca93.att-apps.com:8889/forms/java/jacob.jar
+http://crl.verisign.com/pca3.crl0
+http://CSC3-2004-aia.verisign.com/CSC3-2004-aia.cer0
+http://CSC3-2004-crl.verisign.com/CSC3-2004.crl0D
+http://ocsp.verisign.com0?
+https://www.verisign.com/rpa
+https://www.verisign.com/rpa0
+https://www.verisign.com/rpa01

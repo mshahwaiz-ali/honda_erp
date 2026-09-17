@@ -1,0 +1,39 @@
+﻿
+
+FullName       : C:\Program Files (x86)\Java\jre6\bin\java.exe
+FileVersion    : 6.0.320.5
+ProductVersion : 6.0.320.5
+
+FullName       : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+FileVersion    : 153.0.4234.32
+ProductVersion : 153.0.4234.32
+
+FullName       : C:\Program Files\Internet Explorer\iexplore.exe
+FileVersion    : 11.00.19041.1 (WinBuild.160101.0800)
+ProductVersion : 11.00.19041.1
+
+
+
+===== CURRENT LEGACY PROCESSES / WINDOWS =====
+
+Name           Id Path                                                         MainWindowTitle                                                      
+----           -- ----                                                         ---------------                                                      
+iexplore     2476 C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE                                                                             
+iexplore     7148 C:\Program Files\Internet Explorer\iexplore.exe                                                                                   
+iexplore    13020 C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE                                                                             
+java        10436 C:\Program Files (x86)\Java\jre6\bin\java.exe                Computerized Accounts                                                
+java        16544 C:\Program Files (x86)\Java\jre6\bin\java.exe                Computerized Accounts                                                
+jp2launcher 11456 C:\PROGRA~2\Java\jre6\bin\jp2launcher.exe                                                                                         
+jp2launcher 15548 C:\PROGRA~2\Java\jre6\bin\jp2launcher.exe                                                                                         
+msedge       3660 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge       4364 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge       5620 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge       6888 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge       9980 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge      11288 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge      11840 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge      13176 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge      15056 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe                                                                      
+msedge      15188 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe Consultancy Application and 1 more page - Profile 1 - Microsoft​ Edge
+
+

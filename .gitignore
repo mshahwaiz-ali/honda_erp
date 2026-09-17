@@ -1,0 +1,15 @@
+# Raw Oracle/Java client runtime evidence.
+# Preserve locally; not useful as application source.
+client_old/Deployment/
+client_old/ali/honda_legacy_reference/
+client_old/ali/honda_legacy_reference (2)/
+client_old/ali/*.zip
+
+# Archives
+*.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

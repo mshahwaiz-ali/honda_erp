@@ -1,0 +1,11 @@
+===== EDGE HKLM ===== 
+ERROR: The system was unable to find the specified registry key or value.
+===== EDGE HKCU ===== 
+ERROR: The system was unable to find the specified registry key or value.
+===== IE ENTERPRISE MODE HKLM ===== 
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\EnterpriseMode
+    MSEdgePath    REG_SZ    C:\Program Files (x86)\Microsoft\Edge\Application
+
+===== IE ENTERPRISE MODE HKCU ===== 
+ERROR: The system was unable to find the specified registry key or value.
