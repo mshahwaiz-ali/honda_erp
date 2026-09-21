@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Honda Bike ERP Legacy Screenshot Analysis",
+  "type": "object",
+  "required": ["batch_id", "images"],
+  "properties": {
+    "batch_id": {"type": "string"},
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["image_id", "source_image", "analysis_status"],
+        "properties": {
+          "image_id": {"type": "string"},
+          "source_image": {"type": "string"},
+          "analysis_status": {"enum": ["pending", "analyzed", "needs_review"]},
+          "screen_title": {"type": ["string", "null"]},
+          "screen_type": {
+            "type": ["string", "null"],
+            "description": "Observed or cautiously inferred type such as menu, master, transaction, voucher, query, or report."
+          },
+          "observed_purpose": {"type": ["string", "null"]},
+          "visible_sections": {"type": "array", "items": {"type": "string"}},
+          "visible_fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {"type": "string"},
+                "visible_example": {"type": ["string", "null"]},
+                "observed_state": {"type": ["string", "null"]},
+                "notes": {"type": ["string", "null"]}
+              }
+            }
+          },
+          "visible_actions": {"type": "array", "items": {"type": "string"}},
+          "tables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name_or_context": {"type": ["string", "null"]},
+                "columns": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "filters": {"type": "array", "items": {"type": "string"}},
+          "statuses": {"type": "array", "items": {"type": "string"}},
+          "calculations_and_totals": {"type": "array", "items": {"type": "string"}},
+          "accounting_evidence": {"type": "array", "items": {"type": "string"}},
+          "inventory_evidence": {"type": "array", "items": {"type": "string"}},
+          "vehicle_evidence": {"type": "array", "items": {"type": "string"}},
+          "customer_or_dealer_evidence": {"type": "array", "items": {"type": "string"}},
+          "document_relationship_evidence": {"type": "array", "items": {"type": "string"}},
+          "workflow_evidence": {"type": "array", "items": {"type": "string"}},
+          "inferences": {"type": "array", "items": {"type": "string"}},
+          "unknowns": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"enum": ["high", "medium", "low", null]},
+          "notes": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
