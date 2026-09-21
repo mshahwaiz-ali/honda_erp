@@ -30,25 +30,25 @@
     },
     {
       "batch_id": "BIKE-BATCH-02",
-      "status": "pending",
+      "status": "analyzed",
       "images": [
         {
           "image_id": "BIKE-004",
           "source_image": "client_old/software_images_bike/menu_bike_3.png",
           "filename": "menu_bike_3.png",
-          "status": "pending"
+          "status": "analyzed"
         },
         {
           "image_id": "BIKE-005",
           "source_image": "client_old/software_images_bike/head_form.png",
           "filename": "head_form.png",
-          "status": "pending"
+          "status": "analyzed"
         },
         {
           "image_id": "BIKE-006",
           "source_image": "client_old/software_images_bike/item_registration_form.png",
           "filename": "item_registration_form.png",
-          "status": "pending"
+          "status": "analyzed"
         }
       ]
     },
