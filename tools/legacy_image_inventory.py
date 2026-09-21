@@ -2,9 +2,11 @@
 """
 Legacy Honda ERP screenshot inventory helper.
 
-This script DOES NOT attempt semantic ERP analysis or OCR.
-It creates reproducible metadata for screenshot evidence so the visual
-analysis can be performed accurately in small batches and stored as JSON.
+Creates reproducible metadata for screenshot evidence and, when a manifest
+exists, preserves the logical review order defined by that manifest.
+
+This script intentionally does NOT perform OCR or semantic ERP analysis.
+Detailed business interpretation is written separately after visual review.
 
 Only Python standard library is required.
 """
@@ -37,25 +39,103 @@ def png_dimensions(path: Path) -> tuple[int, int] | tuple[None, None]:
     return width, height
 
 
-def build_inventory(source: Path, batch_size: int) -> dict:
+def image_metadata(path: Path, sequence: int, image_id: str | None = None) -> dict:
+    width, height = png_dimensions(path)
+    data = {
+        "sequence": sequence,
+        "filename": path.name,
+        "path": path.as_posix(),
+        "sha256": sha256(path),
+        "bytes": path.stat().st_size,
+        "width": width,
+        "height": height,
+        "analysis_status": "pending",
+    }
+    if image_id:
+        data["image_id"] = image_id
+    return data
+
+
+def load_manifest(manifest_path: Path) -> dict | None:
+    if not manifest_path.is_file():
+        return None
+    return json.loads(manifest_path.read_text(encoding="utf-8"))
+
+
+def build_from_manifest(source: Path, manifest: dict) -> dict:
+    actual_files = {
+        p.name: p
+        for p in source.iterdir()
+        if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
+    }
+
+    manifest_names: list[str] = []
+    batches: list[dict] = []
+    sequence = 0
+
+    for batch in manifest.get("batches", []):
+        out_images = []
+        for entry in batch.get("images", []):
+            filename = entry["filename"]
+            manifest_names.append(filename)
+
+            if filename not in actual_files:
+                raise SystemExit(
+                    f"Manifest references missing screenshot: {filename}"
+                )
+
+            sequence += 1
+            out_images.append(
+                image_metadata(
+                    actual_files[filename],
+                    sequence,
+                    entry.get("image_id"),
+                )
+            )
+
+        batches.append({
+            "batch_number": len(batches) + 1,
+            "batch_id": batch.get("batch_id"),
+            "analysis_status": batch.get("status", "pending"),
+            "images": out_images,
+        })
+
+    duplicate_names = sorted(
+        name for name in set(manifest_names)
+        if manifest_names.count(name) > 1
+    )
+    if duplicate_names:
+        raise SystemExit(
+            "Duplicate screenshot(s) in manifest: " + ", ".join(duplicate_names)
+        )
+
+    unlisted = sorted(set(actual_files) - set(manifest_names))
+    if unlisted:
+        raise SystemExit(
+            "Screenshot(s) exist but are not listed in manifest: "
+            + ", ".join(unlisted)
+        )
+
+    return {
+        "source_directory": source.as_posix(),
+        "ordering": "logical_manifest",
+        "image_count": sequence,
+        "batch_size": manifest.get("batch_size", 3),
+        "batch_count": len(batches),
+        "batches": batches,
+    }
+
+
+def build_alphabetically(source: Path, batch_size: int) -> dict:
     files = sorted(
         p for p in source.iterdir()
         if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
     )
 
-    images = []
-    for i, path in enumerate(files, start=1):
-        width, height = png_dimensions(path)
-        images.append({
-            "sequence": i,
-            "filename": path.name,
-            "path": path.as_posix(),
-            "sha256": sha256(path),
-            "bytes": path.stat().st_size,
-            "width": width,
-            "height": height,
-            "analysis_status": "pending",
-        })
+    images = [
+        image_metadata(path, i)
+        for i, path in enumerate(files, start=1)
+    ]
 
     batches = []
     for offset in range(0, len(images), batch_size):
@@ -68,6 +148,7 @@ def build_inventory(source: Path, batch_size: int) -> dict:
 
     return {
         "source_directory": source.as_posix(),
+        "ordering": "alphabetical_fallback",
         "image_count": len(images),
         "batch_size": batch_size,
         "batch_count": len(batches),
@@ -83,6 +164,11 @@ def main() -> None:
         help="Screenshot directory relative to repository root.",
     )
     parser.add_argument(
+        "--manifest",
+        default="docs/bike_erp_image_analysis/bike_image_manifest.json",
+        help="Logical screenshot review manifest.",
+    )
+    parser.add_argument(
         "--output",
         default="docs/bike_erp_image_analysis/generated_inventory.json",
         help="JSON output path.",
@@ -94,15 +180,27 @@ def main() -> None:
     if not source.is_dir():
         raise SystemExit(f"Source directory not found: {source}")
 
+    manifest_path = Path(args.manifest)
+    manifest = load_manifest(manifest_path)
+
+    if manifest is not None:
+        data = build_from_manifest(source, manifest)
+    else:
+        data = build_alphabetically(source, args.batch_size)
+
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
-
-    data = build_inventory(source, args.batch_size)
     output.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
-    print(f"Images:  {data['image_count']}")
-    print(f"Batches: {data['batch_count']}")
-    print(f"Output:  {output}")
+    print(f"Images:   {data['image_count']}")
+    print(f"Batches:  {data['batch_count']}")
+    print(f"Ordering: {data['ordering']}")
+    print(f"Output:   {output}")
+
+    if data["batches"]:
+        print("First batch:")
+        for image in data["batches"][0]["images"]:
+            print(f" - {image['filename']}")
 
 
 if __name__ == "__main__":
