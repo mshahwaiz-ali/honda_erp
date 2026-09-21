@@ -1,0 +1,140 @@
+{
+  "batch_id": "BIKE-BATCH-09",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch documents operational reporting around bookings and procurement. All three reports have in-app filters plus RDF/PDF-style report execution and spreadsheet generation.",
+  "images": [
+    {
+      "image_id": "BIKE-025",
+      "filename": "advance_booking_report.png",
+      "sha256": "87e3eb6bb9cc6fdbddd221acd3bdfd072f7f165633bc4c8e6dfda4e0c1d588d6",
+      "screen_title": "ADVANCE BOOKING REPORT",
+      "screen_type": "booking status/report view",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "Status"
+      ],
+      "columns": [
+        "Sr No",
+        "Date",
+        "Issue Date",
+        "CNIC",
+        "Name",
+        "Cell No",
+        "Model",
+        "Ac No",
+        "Amount"
+      ],
+      "observed": [
+        "Advance bookings can be filtered by Status.",
+        "Report rows include booking dates, customer identity/contact, model, account number and amount.",
+        "The application supports both rendered RDF report and spreadsheet output."
+      ],
+      "inferred": [
+        "Issue Date likely represents completion/allocation/delivery-related date, but exact meaning is not shown."
+      ],
+      "unknowns": [
+        "Status value set",
+        "Meaning of Ac No",
+        "Issue Date business event"
+      ]
+    },
+    {
+      "image_id": "BIKE-026",
+      "filename": "pending_order_report.png",
+      "sha256": "1e62f0ae017bb9c8d921254352c50d4ac969cd81deb58be3a5840659eb6883fc",
+      "screen_title": "PENDING ORDER REPORT",
+      "screen_type": "purchase-order fulfillment report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "Order No",
+        "Model"
+      ],
+      "columns": [
+        "P.Order #",
+        "Model Name",
+        "Colour",
+        "Order Qty",
+        "Receive Qty",
+        "Balance"
+      ],
+      "observed": [
+        "Pending purchase orders are measured by ordered quantity, received quantity and remaining balance.",
+        "Report can filter by order number and model."
+      ],
+      "inferred": [
+        "Balance is likely Order Qty minus Receive Qty; the formula is strongly implied but not directly demonstrated with populated rows."
+      ],
+      "unknowns": [
+        "Whether cancelled quantities affect balance",
+        "Whether receipts are linked strictly by P.O. number"
+      ]
+    },
+    {
+      "image_id": "BIKE-027",
+      "filename": "bike_purchase_order_report.png",
+      "sha256": "0de1494cbf1985158e9d5827bf06ca9ba7ae6ddf61cce8e666d32d65f84f168c",
+      "screen_title": "BIKE PURCHASE ORDER REPORT",
+      "screen_type": "purchase-order report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "Start Date",
+        "End Date",
+        "P.O. NO."
+      ],
+      "columns": [
+        "Sr No",
+        "Order Date",
+        "P.O NO",
+        "Model Name",
+        "Color",
+        "Qty",
+        "Rate",
+        "Total"
+      ],
+      "observed": [
+        "Purchase orders can be reported by date range and optional P.O. number.",
+        "Model, colour, quantity, rate and total are the core reported dimensions."
+      ],
+      "inferred": [],
+      "unknowns": [
+        "Supplier/account is not visible in this report grid",
+        "Whether one PO can contain multiple models/colours in report grouping"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Pending Order Report directly ties purchasing to receiving through ordered versus received quantities.",
+    "Advance Booking Report is customer/model/amount/status oriented, while procurement reports are model/colour/quantity oriented.",
+    "Legacy reporting commonly offers both RDF output and Generate Sheet."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Most procurement reporting should be evaluated against standard ERPNext Purchase Order/Purchase Receipt analytics before custom reports are planned.",
+    "Advance-booking reporting will depend on the final booking workflow/model."
+  ]
+}
