@@ -1,0 +1,350 @@
+{
+  "batch_id": "BIKE-BATCH-02",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "source_count": 3,
+  "images": [
+    {
+      "image_id": "BIKE-004",
+      "source_image": "client_old/software_images_bike/menu_bike_3.png",
+      "sha256": "c6ab40bf3a4220d0ac25b0b9c79c379e043f493224094a054bdbca8ccaf384f7",
+      "analysis_status": "analyzed",
+      "screen_title": "Computerized Accounts",
+      "screen_type": "main navigation / lower menu state",
+      "observed_purpose": "Shows lower Bike-system navigation including FIFO report children and additional stock/daily-transaction entries.",
+      "visible_sections": [
+        "REPORTS MENU",
+        "ADMIN MENU",
+        "SALES MENU",
+        "FIFO REPORTS"
+      ],
+      "visible_fields": [],
+      "visible_actions": [
+        "ACCOUNTS REPORTS",
+        "GENERAL REPORTS",
+        "PROFIT REPORTS",
+        "BIKE REPORTS MENU",
+        "ADD NEW ITEM",
+        "ADD NEW HEAD",
+        "CASH SALE",
+        "DEALER SALE",
+        "USED BIKE SALE",
+        "DATE WISE PROFIT",
+        "ITEM WISE PROFIT",
+        "STOCK VALUE",
+        "STOCK ADJUST",
+        "DAILY TRANSACTION"
+      ],
+      "tables": [],
+      "filters": [],
+      "statuses": [],
+      "calculations_and_totals": [],
+      "accounting_evidence": [
+        "Accounts Reports and Profit Reports are visible.",
+        "Daily Transaction is a visible navigation entry; exact accounting role is unknown."
+      ],
+      "inventory_evidence": [
+        "FIFO Reports has Date Wise Profit, Item Wise Profit and Stock Value children.",
+        "Stock Adjust is a distinct visible entry."
+      ],
+      "vehicle_evidence": [],
+      "customer_or_dealer_evidence": [],
+      "document_relationship_evidence": [],
+      "workflow_evidence": [
+        "Stock adjustment exists as a distinct operation.",
+        "No posting or approval workflow is shown."
+      ],
+      "inferences": [
+        "FIFO report grouping suggests FIFO-oriented inventory profitability/value reporting, but exact valuation mechanics are not proven."
+      ],
+      "unknowns": [
+        "Exact Stock Adjust form behavior.",
+        "Exact Daily Transaction screen/report type.",
+        "Exact FIFO costing mechanics."
+      ],
+      "confidence": "high",
+      "notes": [
+        "This image resolves the visible FIFO Report child entries left unknown in Batch 01.",
+        "Daily Transaction is visibly selected/highlighted."
+      ]
+    },
+    {
+      "image_id": "BIKE-005",
+      "source_image": "client_old/software_images_bike/head_form.png",
+      "sha256": "45d134d38d7dbc5d030c9e0cf7986f36de91c3b3e9a94e2bcb11a801faa18193",
+      "analysis_status": "analyzed",
+      "screen_title": "WIND_MENU",
+      "screen_type": "master-data maintenance form",
+      "observed_purpose": "Maintains a legacy 'Head' record containing grouping/account naming plus address/contact information.",
+      "visible_sections": [
+        "action bar",
+        "head/account identity fields",
+        "address/contact fields"
+      ],
+      "visible_fields": [
+        {
+          "label": "Code",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "Group Code",
+          "visible_example": null,
+          "observed_state": "selection/input with dropdown control",
+          "notes": "Options not visible."
+        },
+        {
+          "label": "Head Name",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "TYPE",
+          "visible_example": null,
+          "observed_state": "dropdown/selection",
+          "notes": "Options not visible."
+        },
+        {
+          "label": "Account Name",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "CITY NAME",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "AREA",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "Address",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "CELL 1",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "CELL 2",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "FAX NO",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "Cont. Person",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": "Likely Contact Person label abbreviation."
+        }
+      ],
+      "visible_actions": [
+        "SAVE",
+        "ADD NEW",
+        "VIEW",
+        "FIND",
+        "DELETE",
+        "VIEW ALL",
+        "LAST",
+        "BACK"
+      ],
+      "tables": [],
+      "filters": [],
+      "statuses": [],
+      "calculations_and_totals": [],
+      "accounting_evidence": [
+        "Code, Group Code, Head Name, TYPE and Account Name are visible.",
+        "The form also stores contact/address data, so the legacy Head appears richer than a bare account code/name record."
+      ],
+      "inventory_evidence": [],
+      "vehicle_evidence": [],
+      "customer_or_dealer_evidence": [
+        "City, area, address, cell numbers, fax and contact person are visible, suggesting party/contact characteristics."
+      ],
+      "document_relationship_evidence": [],
+      "workflow_evidence": [
+        "Create/search/browse/delete operations are available for Head records."
+      ],
+      "inferences": [
+        "TYPE and Group Code may classify the Head into business/account categories.",
+        "The Head entity may combine concerns that ERPNext separates into Account, Customer/Supplier, Address and Contact, but this is not yet proven."
+      ],
+      "unknowns": [
+        "TYPE options.",
+        "Group Code options and source.",
+        "Exact business meaning of Head.",
+        "Any fields below the visible viewport.",
+        "Whether Head records post directly to accounting."
+      ],
+      "confidence": "medium",
+      "notes": [
+        "A vertical scrollbar is visible; off-screen fields may exist."
+      ]
+    },
+    {
+      "image_id": "BIKE-006",
+      "source_image": "client_old/software_images_bike/item_registration_form.png",
+      "sha256": "a2ab7e03ec619ddfe75a72defa648b01cb8e9521f6a9a5c48f40083f147e5084",
+      "analysis_status": "analyzed",
+      "screen_title": "ITEM REGISTRATION FORM",
+      "screen_type": "item master / registration form",
+      "observed_purpose": "Maintains item identity, classification, barcode/QR and pricing/profit-related fields.",
+      "visible_sections": [
+        "action bar",
+        "item identity/classification",
+        "pricing/profit fields"
+      ],
+      "visible_fields": [
+        {
+          "label": "Item Code",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "Item",
+          "visible_example": null,
+          "observed_state": "input with list/lookup control",
+          "notes": null
+        },
+        {
+          "label": "Brand",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "Catagory",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": "Legacy UI spelling recorded exactly."
+        },
+        {
+          "label": "Barcode / Qr Code",
+          "visible_example": null,
+          "observed_state": "input",
+          "notes": null
+        },
+        {
+          "label": "Price",
+          "visible_example": null,
+          "observed_state": "input/display",
+          "notes": "Formula/semantics unknown."
+        },
+        {
+          "label": "Profit %",
+          "visible_example": null,
+          "observed_state": "input/display",
+          "notes": "Formula/semantics unknown."
+        },
+        {
+          "label": "Net Amount",
+          "visible_example": null,
+          "observed_state": "input/display",
+          "notes": "Formula/semantics unknown."
+        },
+        {
+          "label": "Purchase Rate",
+          "visible_example": null,
+          "observed_state": "input/display",
+          "notes": "Formula/semantics unknown."
+        },
+        {
+          "label": "Profit Amt",
+          "visible_example": null,
+          "observed_state": "input/display",
+          "notes": "Formula/semantics unknown."
+        },
+        {
+          "label": "Parts Sale Rate",
+          "visible_example": null,
+          "observed_state": "input/display",
+          "notes": "Presence does not prove shared Bike/Parts database."
+        }
+      ],
+      "visible_actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "VIEW ALL",
+        "LAST",
+        "DELETE",
+        "BACK"
+      ],
+      "tables": [],
+      "filters": [],
+      "statuses": [],
+      "calculations_and_totals": [
+        "Price, Purchase Rate, Profit %, Profit Amt, Net Amount and Parts Sale Rate are all visible together.",
+        "No calculation formula is observable from the blank screenshot."
+      ],
+      "accounting_evidence": [
+        "Pricing/profit fields are maintained or displayed at item-master level."
+      ],
+      "inventory_evidence": [
+        "Item Code, Item, Brand and Catagory are visible.",
+        "Barcode / Qr Code field is visible."
+      ],
+      "vehicle_evidence": [],
+      "customer_or_dealer_evidence": [],
+      "document_relationship_evidence": [],
+      "workflow_evidence": [
+        "Create/find/view/browse/delete operations are available for item records."
+      ],
+      "inferences": [
+        "Legacy pricing may use item-level stored rates/profit values.",
+        "ERPNext standard Item/Brand/Item Group/Barcode/Pricing features should be evaluated before recreating these fields."
+      ],
+      "unknowns": [
+        "Pricing formulas.",
+        "Whether visible rate/profit fields are editable or calculated.",
+        "Use of Parts Sale Rate in Bike workflows.",
+        "Barcode/QR scanning behavior.",
+        "Any off-screen fields."
+      ],
+      "confidence": "high",
+      "notes": [
+        "A vertical scrollbar is visible; the screenshot may not show every field."
+      ]
+    }
+  ],
+  "cross_batch_resolutions": [
+    {
+      "from_batch": "BIKE-BATCH-01",
+      "question": "Children of FIFO REPORTS",
+      "resolution": [
+        "DATE WISE PROFIT",
+        "ITEM WISE PROFIT",
+        "STOCK VALUE"
+      ]
+    }
+  ],
+  "preliminary_erpnext_relevance": {
+    "status": "non-final",
+    "observations": [
+      "Legacy Head should not automatically become a custom ERPNext DocType; determine whether its records decompose into standard Account/Customer/Supplier/Address/Contact concepts.",
+      "Item Registration overlaps standard ERPNext Item, Brand, Item Group, Barcode and pricing capabilities.",
+      "Stock Adjust should be compared with standard ERPNext stock reconciliation/stock entry behavior after its own evidence is available.",
+      "FIFO profit/value reports should be compared with ERPNext stock valuation and profitability reports before custom reporting is planned."
+    ]
+  }
+}
