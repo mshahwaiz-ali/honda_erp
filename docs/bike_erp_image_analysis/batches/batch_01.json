@@ -1,0 +1,262 @@
+{
+  "batch_id": "BIKE-BATCH-01",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "source_count": 3,
+  "cross_image_findings": {
+    "observed_top_level_groups": [
+      "BIKE INVENTORY MENU",
+      "ACCOUNTS MENU",
+      "REPORTS MENU",
+      "ADMIN MENU",
+      "SALES MENU",
+      "FIFO REPORTS"
+    ],
+    "observed_business_footprint": [
+      "bike procurement and inventory receipt",
+      "bike quotation",
+      "cash sale",
+      "dealer sale",
+      "used-bike purchase and sale",
+      "booking/advance-related customer function",
+      "registration processing and registration receipt",
+      "cash receipt/payment vouchers",
+      "journal voucher",
+      "item/head administration",
+      "accounting/general/profit/bike/FIFO reporting"
+    ],
+    "evidence_warning": "Menu labels prove visible entry points, not hidden database relationships, accounting rules, or workflow sequence."
+  },
+  "images": [
+    {
+      "image_id": "BIKE-001",
+      "source_image": "client_old/software_images_bike/menu.png",
+      "sha256": "5304bca696223ecc7f1c284ee602b0f402ea6a13ceec47ce4189a5a89d63e9aa",
+      "analysis_status": "analyzed",
+      "screen_title": "Computerized Accounts",
+      "screen_type": "main navigation / menu",
+      "observed_purpose": "Primary Bike-system navigation exposing inventory, accounts, reporting, administration, sales and FIFO-report areas.",
+      "visible_sections": [
+        "BIKE INVENTORY MENU",
+        "ACCOUNTS MENU",
+        "REPORTS MENU",
+        "ADMIN MENU",
+        "SALES MENU",
+        "FIFO REPORTS",
+        "main branded work area"
+      ],
+      "visible_fields": [],
+      "visible_actions": [
+        "DEALER CUSTOMER INVOICE",
+        "PURCHASE ORDER (BIKE)",
+        "RECEIVE INVENTORY (BIKE)",
+        "CASH BALANCE RECEIVE",
+        "REGISTRATION FORMS",
+        "BIKE QUOTATION",
+        "USED BIKE PURCHASE",
+        "CASH RECEIVE VOUCHER",
+        "CASH PAYMENT VOUCHER",
+        "JV VOUCHER",
+        "ADVANCE BOOKING CUSTOMER",
+        "REGISTRATION RECEIVE VOUCHER",
+        "ADD NEW ITEM",
+        "ADD NEW HEAD",
+        "CASH SALE",
+        "DEALER SALE",
+        "USED BIKE SALE"
+      ],
+      "tables": [],
+      "filters": [],
+      "statuses": [],
+      "calculations_and_totals": [],
+      "accounting_evidence": [
+        "Dedicated Cash Receive Voucher entry point is visible.",
+        "Dedicated Cash Payment Voucher entry point is visible.",
+        "Dedicated JV Voucher entry point is visible.",
+        "Registration Receive Voucher is a distinct entry point.",
+        "Add New Head is visible under Admin Menu, suggesting a maintained 'head' master; exact accounting semantics require later evidence."
+      ],
+      "inventory_evidence": [
+        "Purchase Order (Bike) is visible.",
+        "Receive Inventory (Bike) is visible.",
+        "Used Bike Purchase is visible.",
+        "Add New Item is visible.",
+        "FIFO Reports parent menu is visible."
+      ],
+      "vehicle_evidence": [
+        "New-bike purchase/receipt functions are explicitly bike-specific.",
+        "Used Bike Purchase and Used Bike Sale are distinct business functions.",
+        "Registration Forms is a dedicated function."
+      ],
+      "customer_or_dealer_evidence": [
+        "Dealer Customer Invoice is visible.",
+        "Advance Booking Customer is visible.",
+        "Dealer Sale is distinct from Cash Sale."
+      ],
+      "document_relationship_evidence": [],
+      "workflow_evidence": [
+        "The menu exposes separate procurement, receipt, sale, booking, registration and accounting functions.",
+        "No exact document flow is directly shown by this screenshot."
+      ],
+      "inferences": [
+        "Purchase Order (Bike) may feed Receive Inventory (Bike), but the menu does not prove this.",
+        "Cash Balance Receive may relate to outstanding booking/sale balances, but the menu does not prove the source document.",
+        "Registration Forms and Registration Receive Voucher may belong to the same registration lifecycle, but this is not yet proven."
+      ],
+      "unknowns": [
+        "Exact relationship between Dealer Customer Invoice and Dealer Sale.",
+        "Exact meaning/data model of Add New Head.",
+        "FIFO Reports child entries.",
+        "Posting logic for any visible transaction."
+      ],
+      "confidence": "high",
+      "notes": [
+        "Oracle Forms framework menus Action/Edit/Query/Block/Record/Field/Help/Window are visible but are not business-specific evidence.",
+        "Dealership/Atlas Honda branding is visible in the main panel."
+      ]
+    },
+    {
+      "image_id": "BIKE-002",
+      "source_image": "client_old/software_images_bike/menu_bike.png",
+      "sha256": "5fb9dde05702291344515ad3d4bbe1b71d676ca250e3c67a3b2d118d427c3791",
+      "analysis_status": "analyzed",
+      "screen_title": "Computerized Accounts",
+      "screen_type": "main navigation / report menu expanded",
+      "observed_purpose": "Same Bike-system navigation screen with the report hierarchy expanded.",
+      "visible_sections": [
+        "BIKE INVENTORY MENU",
+        "ACCOUNTS MENU",
+        "REPORTS MENU",
+        "ADMIN MENU",
+        "main branded work area"
+      ],
+      "visible_fields": [],
+      "visible_actions": [
+        "ACCOUNTS REPORTS",
+        "GENERAL REPORTS",
+        "PROFIT REPORTS",
+        "BIKE REPORTS MENU"
+      ],
+      "tables": [],
+      "filters": [],
+      "statuses": [],
+      "calculations_and_totals": [],
+      "accounting_evidence": [
+        "Accounts Reports is a dedicated report category.",
+        "Profit Reports is a dedicated report category."
+      ],
+      "inventory_evidence": [
+        "Bike Reports Menu is a dedicated report category; individual report contents are not visible here."
+      ],
+      "vehicle_evidence": [],
+      "customer_or_dealer_evidence": [],
+      "document_relationship_evidence": [],
+      "workflow_evidence": [
+        "Reports are organized hierarchically by report domain."
+      ],
+      "inferences": [
+        "The application likely contains multiple reports within each visible report category; specific report names are not inferable from this screenshot."
+      ],
+      "unknowns": [
+        "Children of Accounts Reports.",
+        "Children of General Reports.",
+        "Children of Profit Reports.",
+        "Children of Bike Reports Menu."
+      ],
+      "confidence": "high",
+      "notes": [
+        "Bike Inventory and Accounts entries visible in BIKE-001 are reconfirmed."
+      ]
+    },
+    {
+      "image_id": "BIKE-003",
+      "source_image": "client_old/software_images_bike/menu_bike_2.png",
+      "sha256": "1aac60a1c3f8d91121a5258852da9a39b0bcff59152575b07486c00882e25030",
+      "analysis_status": "analyzed",
+      "screen_title": "Computerized Accounts",
+      "screen_type": "main navigation / admin and sales menus expanded",
+      "observed_purpose": "Same Bike-system navigation screen showing lower menu sections and expanded Admin and Sales functions.",
+      "visible_sections": [
+        "ACCOUNTS MENU",
+        "REPORTS MENU",
+        "ADMIN MENU",
+        "SALES MENU",
+        "FIFO REPORTS",
+        "main branded work area"
+      ],
+      "visible_fields": [],
+      "visible_actions": [
+        "ACCOUNTS REPORTS",
+        "GENERAL REPORTS",
+        "PROFIT REPORTS",
+        "BIKE REPORTS MENU",
+        "ADD NEW ITEM",
+        "ADD NEW HEAD",
+        "CASH SALE",
+        "DEALER SALE",
+        "USED BIKE SALE"
+      ],
+      "tables": [],
+      "filters": [],
+      "statuses": [],
+      "calculations_and_totals": [],
+      "accounting_evidence": [
+        "Add New Head is visible under Admin Menu.",
+        "Accounts Reports and Profit Reports are visible as report categories."
+      ],
+      "inventory_evidence": [
+        "Add New Item is visible.",
+        "FIFO Reports parent menu is visible."
+      ],
+      "vehicle_evidence": [
+        "Cash Sale, Dealer Sale and Used Bike Sale are deliberately separate sale entry points."
+      ],
+      "customer_or_dealer_evidence": [
+        "Dealer Sale is visibly distinct from Cash Sale."
+      ],
+      "document_relationship_evidence": [],
+      "workflow_evidence": [
+        "Sales are separated by transaction scenario in the legacy navigation."
+      ],
+      "inferences": [
+        "The three sale menu entries may be separate forms over related business concepts, but the screenshot does not establish whether they use separate accounting/document models."
+      ],
+      "unknowns": [
+        "Children of FIFO Reports.",
+        "Differences in fields, validation, stock effects and accounting effects among Cash Sale, Dealer Sale and Used Bike Sale.",
+        "Exact structure represented by Add New Head."
+      ],
+      "confidence": "high",
+      "notes": [
+        "The visible layout is consistent with the same navigation tree shown in BIKE-001 and BIKE-002 at a different scroll/expand state."
+      ]
+    }
+  ],
+  "preliminary_erpnext_relevance": {
+    "status": "non-final",
+    "likely_standard_concepts_to_evaluate_later": [
+      "Item",
+      "Customer",
+      "Supplier",
+      "Purchase Order",
+      "Purchase Receipt",
+      "Quotation",
+      "Sales Invoice",
+      "Payment Entry",
+      "Journal Entry",
+      "General Ledger",
+      "stock and accounting reports"
+    ],
+    "likely_gap_areas_to_investigate_later": [
+      "advance bike booking",
+      "bike balance collection",
+      "registration workflow",
+      "used-bike lifecycle",
+      "dealer-sale behavior",
+      "FIFO-specific reporting",
+      "dealership-specific profit reporting"
+    ],
+    "rule": "Prefer standard ERPNext when it models the verified requirement; customize only verified gaps."
+  }
+}
