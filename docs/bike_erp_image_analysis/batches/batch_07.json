@@ -1,0 +1,157 @@
+{
+  "batch_id": "BIKE-BATCH-07",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch proves the Bike system has a double-entry-style voucher and ledger/reporting layer, while also carrying operational vehicle quantity and engine/chassis information into account ledgers.",
+  "images": [
+    {
+      "image_id": "BIKE-019",
+      "filename": "jv_voucher.png",
+      "sha256": "205592efe8942895f8d556873d6d4e280388b59d280e252130db2e6b08a349a5",
+      "screen_title": "JV VOUCHER",
+      "screen_type": "journal voucher / accounting entry",
+      "confidence": "high",
+      "actions": [
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST VOUCHER",
+        "ALL VOUCHERS",
+        "TYPE WISE REPORT",
+        "DELETE",
+        "BACK",
+        "SAVE"
+      ],
+      "fields": [
+        "VOUCHER NO",
+        "VOUCHER TYPE",
+        "USER",
+        "BRANCH"
+      ],
+      "columns": [
+        "DATE",
+        "CODE",
+        "A/C NAME",
+        "NARRATION",
+        "CH NO.",
+        "PAY ORD",
+        "DR/CR",
+        "DEBIT",
+        "CREDIT"
+      ],
+      "observed": [
+        "Journal Voucher supports multiple accounting rows and separate debit/credit totals.",
+        "Voucher Type is selectable.",
+        "Cheque No. and Pay Order fields are built into journal rows.",
+        "DR/CR is a row-level selection."
+      ],
+      "inferred": [
+        "The form is a generic manual accounting adjustment/transfer mechanism."
+      ],
+      "unknowns": [
+        "Voucher Type values",
+        "Balancing validation",
+        "Account restrictions",
+        "Cheque/pay-order workflow"
+      ]
+    },
+    {
+      "image_id": "BIKE-020",
+      "filename": "cash_book.png",
+      "sha256": "6110d2c39c6a00d3fda5cb942ce4c6a47311edaed7dfb5655b58e0f296d04207",
+      "screen_title": "CASH BOOK",
+      "screen_type": "rendered cash-book report",
+      "confidence": "high",
+      "actions": [],
+      "fields": [
+        "A/C",
+        "From Date",
+        "To Date"
+      ],
+      "columns": [
+        "DATE",
+        "Sr No",
+        "NARRATION",
+        "STATUS",
+        "DEBIT",
+        "CREDIT",
+        "BALANCE"
+      ],
+      "observed": [
+        "The rendered report identifies a dedicated cash account labelled CASH IN HAND (BIKE).",
+        "An opening-balance row is present.",
+        "Debit, credit and running balance are reported.",
+        "Visible status codes include ADV/BOOK, C/P and C/S in the sample.",
+        "The report shows debit/credit totals."
+      ],
+      "inferred": [
+        "Status codes likely classify source transaction types; exact mappings require confirmation."
+      ],
+      "unknowns": [
+        "Full status-code dictionary",
+        "Whether cash book is generated from one account only or configurable",
+        "Period opening/closing rules"
+      ]
+    },
+    {
+      "image_id": "BIKE-021",
+      "filename": "accounts_ledger_form.png",
+      "sha256": "02a2f96e6c2d6a675d468ea03c6e52510189d18463f81e4f7328a471870a402c",
+      "screen_title": "ACCOUNTS LEDGER FORM",
+      "screen_type": "interactive general/account ledger view",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "LEDGER NEW (PDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date",
+        "A/c Name"
+      ],
+      "columns": [
+        "Date",
+        "Sr No",
+        "Ref No",
+        "Status",
+        "Description",
+        "Eng No",
+        "Ch No",
+        "In Qty",
+        "Out Qty",
+        "Rate",
+        "Debit",
+        "Credit",
+        "Balance"
+      ],
+      "observed": [
+        "Ledger rows combine financial columns with engine/chassis and inventory in/out quantities.",
+        "The ledger can be filtered by account and date range.",
+        "PDF and spreadsheet outputs are available.",
+        "Debit, credit and balance totals are shown."
+      ],
+      "inferred": [
+        "The legacy ledger/reporting model blends party/account activity with operational vehicle/stock detail."
+      ],
+      "unknowns": [
+        "Whether all account types show Eng/Ch/In/Out data",
+        "Source/status mapping",
+        "Account master relationship to Head form"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "The Bike application has a clear accounting backbone: JV, cash book, account ledger, debit/credit and running balances.",
+    "Accounting reports retain source-operation context through status/reference plus vehicle/quantity fields.",
+    "The dedicated CASH IN HAND (BIKE) label is strong evidence that Bike cash accounting was separated from other business activity."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Use ERPNext accounting ledgers as the canonical accounting layer rather than recreating a parallel debit/credit engine.",
+    "Vehicle-specific context should be linked to standard accounting source documents, not embedded into a replacement GL schema unless a verified gap demands it."
+  ]
+}
