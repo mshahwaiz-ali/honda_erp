@@ -8,7 +8,7 @@
     {
       "batch_number": 1,
       "batch_id": "BIKE-BATCH-01",
-      "analysis_status": "pending",
+      "analysis_status": "analyzed",
       "images": [
         {
           "sequence": 1,
@@ -18,7 +18,7 @@
           "bytes": 383364,
           "width": 1482,
           "height": 923,
-          "analysis_status": "pending",
+          "analysis_status": "analyzed",
           "image_id": "BIKE-001"
         },
         {
@@ -29,7 +29,7 @@
           "bytes": 176205,
           "width": 1449,
           "height": 817,
-          "analysis_status": "pending",
+          "analysis_status": "analyzed",
           "image_id": "BIKE-002"
         },
         {
@@ -40,7 +40,7 @@
           "bytes": 174090,
           "width": 1449,
           "height": 817,
-          "analysis_status": "pending",
+          "analysis_status": "analyzed",
           "image_id": "BIKE-003"
         }
       ]
