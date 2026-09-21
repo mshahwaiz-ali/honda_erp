@@ -86,3 +86,11 @@ The image-analysis phase should eventually produce:
 12. later: implementation plan
 
 The final ERPNext plan must be based on the refined evidence, not on screenshot filenames alone.
+
+## Validated workflow
+
+Batches 01 and 02 have been manually reviewed at full resolution. The inventory/batching helper is validated for the Bike screenshot set: 45 images, 15 logical batches of 3.
+
+The per-batch ZIP exporter is **not part of the durable evidence format**. It was only a transport helper for getting binary screenshots into visual review. Reports are stored directly under `docs/bike_erp_image_analysis/batches/` as Markdown + JSON.
+
+For the remaining Bike screenshots, the efficient workflow is to provide the remaining source images once, then analyze them internally in 3-image logical batches and write the reports directly to this folder. No separate ZIP needs to be retained in the repository.
