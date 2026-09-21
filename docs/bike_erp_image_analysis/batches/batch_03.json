@@ -1,0 +1,189 @@
+{
+  "batch_id": "BIKE-BATCH-03",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "source_count": 3,
+  "evidence_quality_note": "Source filenames are not authoritative for screen identity. BIKE-008 is named booking.png but visibly shows CASH PAYMENT VOUCHER.",
+  "images": [
+    {
+      "image_id": "BIKE-007",
+      "source_image": "client_old/software_images_bike/dealer_customer.png",
+      "sha256": "76071238721c5c02e9a83046c857ad9a7a4bafed9036de309b920c19b2ff6789",
+      "analysis_status": "analyzed",
+      "screen_title": "DEALER CUSTOMER",
+      "screen_type": "dealer/customer bike transaction or invoice-style form",
+      "visible_actions": [
+        "SAVE",
+        "ADD NEW",
+        "Find",
+        "VIEW",
+        "Last",
+        "DELETE",
+        "BACK",
+        "PRINT"
+      ],
+      "visible_fields": [
+        "Sr no",
+        "Invoice no #",
+        "Date",
+        "Dealers Code",
+        "Company Name",
+        "Item Code",
+        "Engine no",
+        "Chassis no",
+        "Brand",
+        "Color",
+        "Customer Name",
+        "Father Name",
+        "Cnic",
+        "Mobile #",
+        "Address",
+        "Cost Price",
+        "Sales Tax 18%",
+        "N.E.V Levy",
+        "Net Price"
+      ],
+      "direct_evidence": [
+        "Transaction includes dealer code, item, engine number, chassis number, brand, color and end-customer identity.",
+        "Sales Tax 18% and N.E.V Levy are separate visible financial fields.",
+        "Vehicle-unit identifiers are captured directly."
+      ],
+      "inferences": [
+        "Likely corresponds to the Dealer Customer Invoice menu entry, but the exact launch path is not directly shown."
+      ],
+      "unknowns": [
+        "Difference from Dealer Sale.",
+        "Tax/levy formulas and posting.",
+        "Meaning of Company Name versus Brand.",
+        "Whether Cost Price is editable, derived, or lookup-based."
+      ],
+      "confidence": "high"
+    },
+    {
+      "image_id": "BIKE-008",
+      "source_image": "client_old/software_images_bike/booking.png",
+      "sha256": "122bdb2635beccd08c99ab1fd0102c30a3f2951263ad1d57f83d8b58c7344ab6",
+      "analysis_status": "analyzed",
+      "screen_title": "CASH PAYMENT VOUCHER",
+      "screen_type": "multi-line accounting/payment voucher",
+      "visible_actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST RECORD",
+        "DELETE",
+        "BACK"
+      ],
+      "visible_fields": [
+        "Sr No.",
+        "Ref Inv",
+        "Booking #",
+        "Date",
+        "Payment Type",
+        "Total"
+      ],
+      "tables": [
+        {
+          "name_or_context": "voucher lines",
+          "columns": [
+            "Pay To",
+            "Ac Name",
+            "Description",
+            "Amount"
+          ]
+        }
+      ],
+      "observed_values": [
+        "Payment Type = CLEAR"
+      ],
+      "accounting_evidence": [
+        "Outgoing payment voucher supports multiple accounting lines.",
+        "Voucher can carry Ref Inv and Booking # references.",
+        "Total field is shown below the detail grid."
+      ],
+      "inferences": [
+        "Booking and invoice references may support allocation or traceability, but automatic linking/posting is not proven."
+      ],
+      "unknowns": [
+        "Payment Type options/meaning",
+        "Reference behavior",
+        "Posting accounts",
+        "Approval/state behavior"
+      ],
+      "confidence": "high"
+    },
+    {
+      "image_id": "BIKE-009",
+      "source_image": "client_old/software_images_bike/advance_booking_customer.png",
+      "sha256": "a9018e342d747b0111a1574a175307023711648db612f9e75916cddaf82a62c4",
+      "analysis_status": "analyzed",
+      "screen_title": "ADVANCE BOOKING CUSTOMER",
+      "screen_type": "bike advance booking / customer reservation form",
+      "visible_actions": [
+        "SAVE",
+        "ADD",
+        "VIEW",
+        "FIND",
+        "DELETE",
+        "LAST",
+        "PRINT",
+        "BACK"
+      ],
+      "visible_fields": [
+        "Delivery Date",
+        "Invoice Date",
+        "Sr No.",
+        "Bill no",
+        "Customer Name",
+        "Father Name",
+        "C.N.I.C",
+        "Address",
+        "Mobile No",
+        "City",
+        "District",
+        "Remarks",
+        "Item Code",
+        "Color",
+        "Status",
+        "Amount",
+        "Advance",
+        "Balance"
+      ],
+      "observed_values": [
+        "USER = ADMIN",
+        "BRANCH = REHMAN HONDA PALACE",
+        "Status = WAITING",
+        "Balance = 0 in captured blank form"
+      ],
+      "direct_evidence": [
+        "Booking captures desired item and color.",
+        "Booking captures customer identity/contact data.",
+        "Booking captures amount, advance and balance.",
+        "Booking includes delivery date and status."
+      ],
+      "workflow_evidence": [
+        "WAITING is an observed booking status.",
+        "The screenshot proves a reservation/advance record exists before or independently of a fully identified engine/chassis sale."
+      ],
+      "inferences": [
+        "A specific engine/chassis may be allocated later because no engine/chassis fields are visible here.",
+        "Remaining balance may later be collected through Cash Balance Receive, but that relation is not yet proven."
+      ],
+      "unknowns": [
+        "All status values/transitions",
+        "Accounting effect of Advance",
+        "Cancellation/refund behavior",
+        "Vehicle allocation point",
+        "Balance settlement link"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "cross_image_findings": [
+    "Booking references appear on the Cash Payment Voucher, establishing at least a visible reference surface between booking and accounting.",
+    "Dealer Customer records engine/chassis while Advance Booking Customer records item/color; this may represent model-level reservation followed by unit allocation.",
+    "Customer identity/contact fields are embedded in both transaction-style forms."
+  ]
+}
