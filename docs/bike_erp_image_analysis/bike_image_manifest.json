@@ -54,25 +54,25 @@
     },
     {
       "batch_id": "BIKE-BATCH-03",
-      "status": "pending",
+      "status": "analyzed",
       "images": [
         {
           "image_id": "BIKE-007",
           "source_image": "client_old/software_images_bike/dealer_customer.png",
           "filename": "dealer_customer.png",
-          "status": "pending"
+          "status": "analyzed"
         },
         {
           "image_id": "BIKE-008",
           "source_image": "client_old/software_images_bike/booking.png",
           "filename": "booking.png",
-          "status": "pending"
+          "status": "analyzed"
         },
         {
           "image_id": "BIKE-009",
           "source_image": "client_old/software_images_bike/advance_booking_customer.png",
           "filename": "advance_booking_customer.png",
-          "status": "pending"
+          "status": "analyzed"
         }
       ]
     },
