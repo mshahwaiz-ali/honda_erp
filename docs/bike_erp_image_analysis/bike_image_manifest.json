@@ -1,0 +1,368 @@
+{
+  "system": "bike",
+  "source_directory": "client_old/software_images_bike",
+  "batch_size": 3,
+  "note": "Review order is organizational only and is not proof of business workflow.",
+  "batches": [
+    {
+      "batch_id": "BIKE-BATCH-01",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-001",
+          "source_image": "client_old/software_images_bike/menu.png",
+          "filename": "menu.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-002",
+          "source_image": "client_old/software_images_bike/menu_bike.png",
+          "filename": "menu_bike.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-003",
+          "source_image": "client_old/software_images_bike/menu_bike_2.png",
+          "filename": "menu_bike_2.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-02",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-004",
+          "source_image": "client_old/software_images_bike/menu_bike_3.png",
+          "filename": "menu_bike_3.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-005",
+          "source_image": "client_old/software_images_bike/head_form.png",
+          "filename": "head_form.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-006",
+          "source_image": "client_old/software_images_bike/item_registration_form.png",
+          "filename": "item_registration_form.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-03",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-007",
+          "source_image": "client_old/software_images_bike/dealer_customer.png",
+          "filename": "dealer_customer.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-008",
+          "source_image": "client_old/software_images_bike/booking.png",
+          "filename": "booking.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-009",
+          "source_image": "client_old/software_images_bike/advance_booking_customer.png",
+          "filename": "advance_booking_customer.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-04",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-010",
+          "source_image": "client_old/software_images_bike/quotation.png",
+          "filename": "quotation.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-011",
+          "source_image": "client_old/software_images_bike/purchase_order.png",
+          "filename": "purchase_order.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-012",
+          "source_image": "client_old/software_images_bike/receive_inventory_bike.png",
+          "filename": "receive_inventory_bike.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-05",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-013",
+          "source_image": "client_old/software_images_bike/cash_sale_invoice.png",
+          "filename": "cash_sale_invoice.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-014",
+          "source_image": "client_old/software_images_bike/dealer_sale_invoice.png",
+          "filename": "dealer_sale_invoice.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-015",
+          "source_image": "client_old/software_images_bike/used_bike_sale_invoice.png",
+          "filename": "used_bike_sale_invoice.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-06",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-016",
+          "source_image": "client_old/software_images_bike/used_bike_purchase_invoice.png",
+          "filename": "used_bike_purchase_invoice.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-017",
+          "source_image": "client_old/software_images_bike/cash_receive_voucher.png",
+          "filename": "cash_receive_voucher.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-018",
+          "source_image": "client_old/software_images_bike/cash_balance_receive.png",
+          "filename": "cash_balance_receive.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-07",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-019",
+          "source_image": "client_old/software_images_bike/jv_voucher.png",
+          "filename": "jv_voucher.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-020",
+          "source_image": "client_old/software_images_bike/cash_book.png",
+          "filename": "cash_book.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-021",
+          "source_image": "client_old/software_images_bike/accounts_ledger_form.png",
+          "filename": "accounts_ledger_form.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-08",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-022",
+          "source_image": "client_old/software_images_bike/registration_form.png",
+          "filename": "registration_form.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-023",
+          "source_image": "client_old/software_images_bike/registration_form_2.png",
+          "filename": "registration_form_2.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-024",
+          "source_image": "client_old/software_images_bike/registration_recieve_voucher.png",
+          "filename": "registration_recieve_voucher.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-09",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-025",
+          "source_image": "client_old/software_images_bike/advance_booking_report.png",
+          "filename": "advance_booking_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-026",
+          "source_image": "client_old/software_images_bike/pending_order_report.png",
+          "filename": "pending_order_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-027",
+          "source_image": "client_old/software_images_bike/bike_purchase_order_report.png",
+          "filename": "bike_purchase_order_report.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-10",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-028",
+          "source_image": "client_old/software_images_bike/daily_cash_sale_report.png",
+          "filename": "daily_cash_sale_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-029",
+          "source_image": "client_old/software_images_bike/dealer_sale_report.png",
+          "filename": "dealer_sale_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-030",
+          "source_image": "client_old/software_images_bike/engine_wise_stock_report.png",
+          "filename": "engine_wise_stock_report.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-11",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-031",
+          "source_image": "client_old/software_images_bike/bike_profit_report.png",
+          "filename": "bike_profit_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-032",
+          "source_image": "client_old/software_images_bike/bike_profit_report2.png",
+          "filename": "bike_profit_report2.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-033",
+          "source_image": "client_old/software_images_bike/data_wise_profit_report_1.png",
+          "filename": "data_wise_profit_report_1.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-12",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-034",
+          "source_image": "client_old/software_images_bike/data_wise_profit_report_2.png",
+          "filename": "data_wise_profit_report_2.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-035",
+          "source_image": "client_old/software_images_bike/registration_profit_report.png",
+          "filename": "registration_profit_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-036",
+          "source_image": "client_old/software_images_bike/registration_profit_report_outdoor.png",
+          "filename": "registration_profit_report_outdoor.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-13",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-037",
+          "source_image": "client_old/software_images_bike/cash_balance_report.png",
+          "filename": "cash_balance_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-038",
+          "source_image": "client_old/software_images_bike/cash_book_report.png",
+          "filename": "cash_book_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-039",
+          "source_image": "client_old/software_images_bike/all_balabnce_summary_report.png",
+          "filename": "all_balabnce_summary_report.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-14",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-040",
+          "source_image": "client_old/software_images_bike/daily_transection_report.png",
+          "filename": "daily_transection_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-041",
+          "source_image": "client_old/software_images_bike/expense_sumary_report.png",
+          "filename": "expense_sumary_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-042",
+          "source_image": "client_old/software_images_bike/GL.png",
+          "filename": "GL.png",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "batch_id": "BIKE-BATCH-15",
+      "status": "pending",
+      "images": [
+        {
+          "image_id": "BIKE-043",
+          "source_image": "client_old/software_images_bike/item_wise_fifo_report.png",
+          "filename": "item_wise_fifo_report.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-044",
+          "source_image": "client_old/software_images_bike/item_wise_fifo_report_2.png",
+          "filename": "item_wise_fifo_report_2.png",
+          "status": "pending"
+        },
+        {
+          "image_id": "BIKE-045",
+          "source_image": "client_old/software_images_bike/report.png",
+          "filename": "report.png",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
