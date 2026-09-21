@@ -6,25 +6,25 @@
   "batches": [
     {
       "batch_id": "BIKE-BATCH-01",
-      "status": "pending",
+      "status": "analyzed",
       "images": [
         {
           "image_id": "BIKE-001",
           "source_image": "client_old/software_images_bike/menu.png",
           "filename": "menu.png",
-          "status": "pending"
+          "status": "analyzed"
         },
         {
           "image_id": "BIKE-002",
           "source_image": "client_old/software_images_bike/menu_bike.png",
           "filename": "menu_bike.png",
-          "status": "pending"
+          "status": "analyzed"
         },
         {
           "image_id": "BIKE-003",
           "source_image": "client_old/software_images_bike/menu_bike_2.png",
           "filename": "menu_bike_2.png",
-          "status": "pending"
+          "status": "analyzed"
         }
       ]
     },
