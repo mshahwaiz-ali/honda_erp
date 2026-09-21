@@ -1,0 +1,609 @@
+{
+  "source_directory": "client_old/software_images_bike",
+  "ordering": "logical_manifest",
+  "image_count": 45,
+  "batch_size": 3,
+  "batch_count": 15,
+  "batches": [
+    {
+      "batch_number": 1,
+      "batch_id": "BIKE-BATCH-01",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 1,
+          "filename": "menu.png",
+          "path": "client_old/software_images_bike/menu.png",
+          "sha256": "5304bca696223ecc7f1c284ee602b0f402ea6a13ceec47ce4189a5a89d63e9aa",
+          "bytes": 383364,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-001"
+        },
+        {
+          "sequence": 2,
+          "filename": "menu_bike.png",
+          "path": "client_old/software_images_bike/menu_bike.png",
+          "sha256": "5fb9dde05702291344515ad3d4bbe1b71d676ca250e3c67a3b2d118d427c3791",
+          "bytes": 176205,
+          "width": 1449,
+          "height": 817,
+          "analysis_status": "pending",
+          "image_id": "BIKE-002"
+        },
+        {
+          "sequence": 3,
+          "filename": "menu_bike_2.png",
+          "path": "client_old/software_images_bike/menu_bike_2.png",
+          "sha256": "1aac60a1c3f8d91121a5258852da9a39b0bcff59152575b07486c00882e25030",
+          "bytes": 174090,
+          "width": 1449,
+          "height": 817,
+          "analysis_status": "pending",
+          "image_id": "BIKE-003"
+        }
+      ]
+    },
+    {
+      "batch_number": 2,
+      "batch_id": "BIKE-BATCH-02",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 4,
+          "filename": "menu_bike_3.png",
+          "path": "client_old/software_images_bike/menu_bike_3.png",
+          "sha256": "c6ab40bf3a4220d0ac25b0b9c79c379e043f493224094a054bdbca8ccaf384f7",
+          "bytes": 184338,
+          "width": 1449,
+          "height": 817,
+          "analysis_status": "pending",
+          "image_id": "BIKE-004"
+        },
+        {
+          "sequence": 5,
+          "filename": "head_form.png",
+          "path": "client_old/software_images_bike/head_form.png",
+          "sha256": "45d134d38d7dbc5d030c9e0cf7986f36de91c3b3e9a94e2bcb11a801faa18193",
+          "bytes": 86784,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-005"
+        },
+        {
+          "sequence": 6,
+          "filename": "item_registration_form.png",
+          "path": "client_old/software_images_bike/item_registration_form.png",
+          "sha256": "a2ab7e03ec619ddfe75a72defa648b01cb8e9521f6a9a5c48f40083f147e5084",
+          "bytes": 94725,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-006"
+        }
+      ]
+    },
+    {
+      "batch_number": 3,
+      "batch_id": "BIKE-BATCH-03",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 7,
+          "filename": "dealer_customer.png",
+          "path": "client_old/software_images_bike/dealer_customer.png",
+          "sha256": "76071238721c5c02e9a83046c857ad9a7a4bafed9036de309b920c19b2ff6789",
+          "bytes": 187004,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-007"
+        },
+        {
+          "sequence": 8,
+          "filename": "booking.png",
+          "path": "client_old/software_images_bike/booking.png",
+          "sha256": "122bdb2635beccd08c99ab1fd0102c30a3f2951263ad1d57f83d8b58c7344ab6",
+          "bytes": 108691,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-008"
+        },
+        {
+          "sequence": 9,
+          "filename": "advance_booking_customer.png",
+          "path": "client_old/software_images_bike/advance_booking_customer.png",
+          "sha256": "a9018e342d747b0111a1574a175307023711648db612f9e75916cddaf82a62c4",
+          "bytes": 107543,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-009"
+        }
+      ]
+    },
+    {
+      "batch_number": 4,
+      "batch_id": "BIKE-BATCH-04",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 10,
+          "filename": "quotation.png",
+          "path": "client_old/software_images_bike/quotation.png",
+          "sha256": "d1eadcb4dc85d58aec95bc36130ffc2ac6fb1fbd8306e6bb82e030b4a39840cf",
+          "bytes": 187327,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-010"
+        },
+        {
+          "sequence": 11,
+          "filename": "purchase_order.png",
+          "path": "client_old/software_images_bike/purchase_order.png",
+          "sha256": "0d3c902f64921306581dead67b1f43a874e026bc0605bd1ec065f49aed87ebb5",
+          "bytes": 197265,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-011"
+        },
+        {
+          "sequence": 12,
+          "filename": "receive_inventory_bike.png",
+          "path": "client_old/software_images_bike/receive_inventory_bike.png",
+          "sha256": "fc9c7b4c97d8448fa9f614ce489dd7e4ef2a1334416d16c1fc75d5457fa47992",
+          "bytes": 204019,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-012"
+        }
+      ]
+    },
+    {
+      "batch_number": 5,
+      "batch_id": "BIKE-BATCH-05",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 13,
+          "filename": "cash_sale_invoice.png",
+          "path": "client_old/software_images_bike/cash_sale_invoice.png",
+          "sha256": "de7e9207bbb47cdd51f61f115a09fc4dcdd737737775f6b49384db807c8bb6b7",
+          "bytes": 149047,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-013"
+        },
+        {
+          "sequence": 14,
+          "filename": "dealer_sale_invoice.png",
+          "path": "client_old/software_images_bike/dealer_sale_invoice.png",
+          "sha256": "711635eb22a46a626239ac833c4a0dc18abf7f9d623fdb6fdf2612b253343306",
+          "bytes": 133717,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-014"
+        },
+        {
+          "sequence": 15,
+          "filename": "used_bike_sale_invoice.png",
+          "path": "client_old/software_images_bike/used_bike_sale_invoice.png",
+          "sha256": "2fb74a8b2ca1f5b6d1b4322bf8c49999c33a31e535fdca26913615ff44c1ed61",
+          "bytes": 133099,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-015"
+        }
+      ]
+    },
+    {
+      "batch_number": 6,
+      "batch_id": "BIKE-BATCH-06",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 16,
+          "filename": "used_bike_purchase_invoice.png",
+          "path": "client_old/software_images_bike/used_bike_purchase_invoice.png",
+          "sha256": "7f0439e46b72b8e13214de36435ae6f6a7bff7090c9cae959ee84d46d534dc0d",
+          "bytes": 200015,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-016"
+        },
+        {
+          "sequence": 17,
+          "filename": "cash_receive_voucher.png",
+          "path": "client_old/software_images_bike/cash_receive_voucher.png",
+          "sha256": "3605f9a7c9bcdfac22d6fe2335e144148a14748bfb5c77ad610bc592f28b8495",
+          "bytes": 104512,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-017"
+        },
+        {
+          "sequence": 18,
+          "filename": "cash_balance_receive.png",
+          "path": "client_old/software_images_bike/cash_balance_receive.png",
+          "sha256": "8700ef0464f1bbd21ff846d5634817e6834edd21536f07aa76551b2ade9d0530",
+          "bytes": 179988,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-018"
+        }
+      ]
+    },
+    {
+      "batch_number": 7,
+      "batch_id": "BIKE-BATCH-07",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 19,
+          "filename": "jv_voucher.png",
+          "path": "client_old/software_images_bike/jv_voucher.png",
+          "sha256": "205592efe8942895f8d556873d6d4e280388b59d280e252130db2e6b08a349a5",
+          "bytes": 108934,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-019"
+        },
+        {
+          "sequence": 20,
+          "filename": "cash_book.png",
+          "path": "client_old/software_images_bike/cash_book.png",
+          "sha256": "6110d2c39c6a00d3fda5cb942ce4c6a47311edaed7dfb5655b58e0f296d04207",
+          "bytes": 172149,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-020"
+        },
+        {
+          "sequence": 21,
+          "filename": "accounts_ledger_form.png",
+          "path": "client_old/software_images_bike/accounts_ledger_form.png",
+          "sha256": "02a2f96e6c2d6a675d468ea03c6e52510189d18463f81e4f7328a471870a402c",
+          "bytes": 144740,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-021"
+        }
+      ]
+    },
+    {
+      "batch_number": 8,
+      "batch_id": "BIKE-BATCH-08",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 22,
+          "filename": "registration_form.png",
+          "path": "client_old/software_images_bike/registration_form.png",
+          "sha256": "42678a208e660a6b396bb6213155f52e06e8615959aa884b5a1551f83f2c3330",
+          "bytes": 232563,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-022"
+        },
+        {
+          "sequence": 23,
+          "filename": "registration_form_2.png",
+          "path": "client_old/software_images_bike/registration_form_2.png",
+          "sha256": "12ecc24482be914edca34f9adb55cb929b89fa6cabcfb633b32f45fdbbc47bbb",
+          "bytes": 230011,
+          "width": 1482,
+          "height": 923,
+          "analysis_status": "pending",
+          "image_id": "BIKE-023"
+        },
+        {
+          "sequence": 24,
+          "filename": "registration_recieve_voucher.png",
+          "path": "client_old/software_images_bike/registration_recieve_voucher.png",
+          "sha256": "eeb6e763d32c8611371d864645a69bac16206243697e6a163f93bd27290868ef",
+          "bytes": 98300,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-024"
+        }
+      ]
+    },
+    {
+      "batch_number": 9,
+      "batch_id": "BIKE-BATCH-09",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 25,
+          "filename": "advance_booking_report.png",
+          "path": "client_old/software_images_bike/advance_booking_report.png",
+          "sha256": "87e3eb6bb9cc6fdbddd221acd3bdfd072f7f165633bc4c8e6dfda4e0c1d588d6",
+          "bytes": 118450,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-025"
+        },
+        {
+          "sequence": 26,
+          "filename": "pending_order_report.png",
+          "path": "client_old/software_images_bike/pending_order_report.png",
+          "sha256": "1e62f0ae017bb9c8d921254352c50d4ac969cd81deb58be3a5840659eb6883fc",
+          "bytes": 113594,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-026"
+        },
+        {
+          "sequence": 27,
+          "filename": "bike_purchase_order_report.png",
+          "path": "client_old/software_images_bike/bike_purchase_order_report.png",
+          "sha256": "0de1494cbf1985158e9d5827bf06ca9ba7ae6ddf61cce8e666d32d65f84f168c",
+          "bytes": 125830,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-027"
+        }
+      ]
+    },
+    {
+      "batch_number": 10,
+      "batch_id": "BIKE-BATCH-10",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 28,
+          "filename": "daily_cash_sale_report.png",
+          "path": "client_old/software_images_bike/daily_cash_sale_report.png",
+          "sha256": "9dead4c64d4eb945faea6377149402353d74ea0d47fe39c62112333bb3bd4886",
+          "bytes": 116358,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-028"
+        },
+        {
+          "sequence": 29,
+          "filename": "dealer_sale_report.png",
+          "path": "client_old/software_images_bike/dealer_sale_report.png",
+          "sha256": "ca17b605dde69bf1ab42338ad63574ea57b7f8d9460d3daa991626b307409917",
+          "bytes": 124371,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-029"
+        },
+        {
+          "sequence": 30,
+          "filename": "engine_wise_stock_report.png",
+          "path": "client_old/software_images_bike/engine_wise_stock_report.png",
+          "sha256": "be94949013860d9687b01d628ba307e5786471daad3ae7428af1e83291110eca",
+          "bytes": 116777,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-030"
+        }
+      ]
+    },
+    {
+      "batch_number": 11,
+      "batch_id": "BIKE-BATCH-11",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 31,
+          "filename": "bike_profit_report.png",
+          "path": "client_old/software_images_bike/bike_profit_report.png",
+          "sha256": "83527b3bfea4d52bc6034f5dfc0877210b7b540e9d39cacc7a23ce54b7c5e1cc",
+          "bytes": 128461,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-031"
+        },
+        {
+          "sequence": 32,
+          "filename": "bike_profit_report2.png",
+          "path": "client_old/software_images_bike/bike_profit_report2.png",
+          "sha256": "f9ddd7990b9daf2fb0f8eb193dc520e81535513fddc54c7f20cc413d1c9ac236",
+          "bytes": 119218,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-032"
+        },
+        {
+          "sequence": 33,
+          "filename": "data_wise_profit_report_1.png",
+          "path": "client_old/software_images_bike/data_wise_profit_report_1.png",
+          "sha256": "984ef577575a7d693d44cd429670faf7529e6bbf9c19e7b59e48956b14d8e1bf",
+          "bytes": 78485,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-033"
+        }
+      ]
+    },
+    {
+      "batch_number": 12,
+      "batch_id": "BIKE-BATCH-12",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 34,
+          "filename": "data_wise_profit_report_2.png",
+          "path": "client_old/software_images_bike/data_wise_profit_report_2.png",
+          "sha256": "2b07ca500b6d0697a621b6e262541370f4f7b93f5b06e598fb7bae5d97021242",
+          "bytes": 367645,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-034"
+        },
+        {
+          "sequence": 35,
+          "filename": "registration_profit_report.png",
+          "path": "client_old/software_images_bike/registration_profit_report.png",
+          "sha256": "cba324ba40982a39cfafff28a63eff23896241e0b8b3d2ec9397e8be02883293",
+          "bytes": 120018,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-035"
+        },
+        {
+          "sequence": 36,
+          "filename": "registration_profit_report_outdoor.png",
+          "path": "client_old/software_images_bike/registration_profit_report_outdoor.png",
+          "sha256": "a79406fc183d2857d563a7e522b326d468bd11725f77e4bba303d56c9ae1507e",
+          "bytes": 120200,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-036"
+        }
+      ]
+    },
+    {
+      "batch_number": 13,
+      "batch_id": "BIKE-BATCH-13",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 37,
+          "filename": "cash_balance_report.png",
+          "path": "client_old/software_images_bike/cash_balance_report.png",
+          "sha256": "bc36dfc7fcb9621d33a9c6a9d603c2fe95c9713b65e0a11cfcdd9dbe00b2d14a",
+          "bytes": 113347,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-037"
+        },
+        {
+          "sequence": 38,
+          "filename": "cash_book_report.png",
+          "path": "client_old/software_images_bike/cash_book_report.png",
+          "sha256": "f83058fa0d0181581af0ccd23f954d1f707b64fec58855c4820619b36517b0d5",
+          "bytes": 125618,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-038"
+        },
+        {
+          "sequence": 39,
+          "filename": "all_balabnce_summary_report.png",
+          "path": "client_old/software_images_bike/all_balabnce_summary_report.png",
+          "sha256": "0977db8635ccd612c473c135d3db931f8cfd65b2b224978b6a85dd2ed19ba512",
+          "bytes": 119646,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-039"
+        }
+      ]
+    },
+    {
+      "batch_number": 14,
+      "batch_id": "BIKE-BATCH-14",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 40,
+          "filename": "daily_transection_report.png",
+          "path": "client_old/software_images_bike/daily_transection_report.png",
+          "sha256": "6e264f22c068d5858c9caa1a0ee5532e7387b6b17ec633c743289c8a1c3a613d",
+          "bytes": 363966,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-040"
+        },
+        {
+          "sequence": 41,
+          "filename": "expense_sumary_report.png",
+          "path": "client_old/software_images_bike/expense_sumary_report.png",
+          "sha256": "1d501e21d71930e7e6024c65e9e5cb397334959fc6af0f5b09ca564aa8a26d54",
+          "bytes": 96731,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-041"
+        },
+        {
+          "sequence": 42,
+          "filename": "GL.png",
+          "path": "client_old/software_images_bike/GL.png",
+          "sha256": "4b577f3803436ca3e79770015782c5cedecd12d44029a7507f6355dc4b3ca3ad",
+          "bytes": 357624,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-042"
+        }
+      ]
+    },
+    {
+      "batch_number": 15,
+      "batch_id": "BIKE-BATCH-15",
+      "analysis_status": "pending",
+      "images": [
+        {
+          "sequence": 43,
+          "filename": "item_wise_fifo_report.png",
+          "path": "client_old/software_images_bike/item_wise_fifo_report.png",
+          "sha256": "66ca2c7cebcaed791e906393407b6bca5543a212baa29553d658fcf300d9bdf9",
+          "bytes": 127047,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-043"
+        },
+        {
+          "sequence": 44,
+          "filename": "item_wise_fifo_report_2.png",
+          "path": "client_old/software_images_bike/item_wise_fifo_report_2.png",
+          "sha256": "691ef225cb0793696c01937f22e3af9799a4e853fae783e462945b6fdee40abf",
+          "bytes": 112367,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-044"
+        },
+        {
+          "sequence": 45,
+          "filename": "report.png",
+          "path": "client_old/software_images_bike/report.png",
+          "sha256": "23b8a5f0910d91bf7fed722c5f9c66b04c75e3c3e40f1fc9d16840b6cdbf717b",
+          "bytes": 322759,
+          "width": 1471,
+          "height": 868,
+          "analysis_status": "pending",
+          "image_id": "BIKE-045"
+        }
+      ]
+    }
+  ]
+}
