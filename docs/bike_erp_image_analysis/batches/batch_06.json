@@ -1,0 +1,157 @@
+{
+  "batch_id": "BIKE-BATCH-06",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch closes the visible used-bike buy/sell pair and distinguishes generic cash receipts from the bike-specific cash-balance collection screen.",
+  "images": [
+    {
+      "image_id": "BIKE-016",
+      "filename": "used_bike_purchase_invoice.png",
+      "sha256": "7f0439e46b72b8e13214de36435ae6f6a7bff7090c9cae959ee84d46d534dc0d",
+      "screen_title": "USED BIKE PURCHASE INVOICE",
+      "screen_type": "used-bike purchase / stock-in transaction",
+      "confidence": "high",
+      "actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "DELETE",
+        "LAST RECORD",
+        "PRINT",
+        "BACK"
+      ],
+      "fields": [
+        "Sr No",
+        "Ref No",
+        "DATE",
+        "Account Code",
+        "Customer Name"
+      ],
+      "columns": [
+        "CODE",
+        "PRODUCT NAME",
+        "BRAND",
+        "ENG NO.",
+        "CH NO.",
+        "IN QTY",
+        "RATE",
+        "AMOUNT",
+        "L",
+        "X"
+      ],
+      "observed": [
+        "Used-bike purchasing is a dedicated transaction.",
+        "The transaction captures account/customer identity plus engine/chassis.",
+        "An explicit IN QTY is recorded.",
+        "Rate, amount, total quantity and total amount are present."
+      ],
+      "inferred": [
+        "Together with Used Bike Sale OUT QTY, this provides strong evidence of a stock-in/stock-out lifecycle for used bikes."
+      ],
+      "unknowns": [
+        "Whether seller should be a supplier or customer in business semantics",
+        "Inspection/condition fields",
+        "Ownership/document checks",
+        "Accounting/tax posting"
+      ]
+    },
+    {
+      "image_id": "BIKE-017",
+      "filename": "cash_receive_voucher.png",
+      "sha256": "3605f9a7c9bcdfac22d6fe2335e144148a14748bfb5c77ad610bc592f28b8495",
+      "screen_title": "CASH RECEIVE VOUCHER",
+      "screen_type": "multi-line incoming cash/accounting voucher",
+      "confidence": "high",
+      "actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST RECORD",
+        "DELETE",
+        "BACK"
+      ],
+      "fields": [
+        "Sr No",
+        "Ref Inv",
+        "Date",
+        "Total"
+      ],
+      "columns": [
+        "Rec From",
+        "Ac Name",
+        "Description",
+        "Amount"
+      ],
+      "observed": [
+        "Incoming cash voucher supports multiple receipt lines.",
+        "A Ref Inv field is available at header level.",
+        "Each line records receipt source, account name, description and amount.",
+        "A total is visible."
+      ],
+      "inferred": [
+        "Ref Inv may link receipts to sales invoices, but allocation behavior is not shown."
+      ],
+      "unknowns": [
+        "Whether Rec From is party code or text",
+        "How accounts are selected",
+        "Whether one receipt can allocate across multiple invoices",
+        "Posting/approval rules"
+      ]
+    },
+    {
+      "image_id": "BIKE-018",
+      "filename": "cash_balance_receive.png",
+      "sha256": "8700ef0464f1bbd21ff846d5634817e6834edd21536f07aa76551b2ade9d0530",
+      "screen_title": "CASH BALANCE RECEIVE (BIKE)",
+      "screen_type": "bike-specific outstanding/balance collection",
+      "confidence": "high",
+      "actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST RECORD",
+        "DELETE",
+        "BACK"
+      ],
+      "fields": [
+        "Sr No.",
+        "Date",
+        "head of A/c",
+        "Sub A/c"
+      ],
+      "columns": [
+        "Bill No.",
+        "Coustomer Name",
+        "Discriptoin",
+        "Amount"
+      ],
+      "observed": [
+        "This is a distinct Bike-specific balance-receipt form, separate from generic Cash Receive Voucher.",
+        "The header uses Head of A/c and Sub A/c account selectors.",
+        "Receipt lines are explicitly bill-number/customer/description/amount oriented."
+      ],
+      "inferred": [
+        "This screen likely collects outstanding balances against prior bike bills, consistent with cash-sale and dealer-sale balance concepts."
+      ],
+      "unknowns": [
+        "Source documents eligible for Bill No",
+        "Whether booking balances use this form",
+        "Head/Sub Account hierarchy semantics",
+        "Partial allocation behavior"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Used Bike Purchase and Used Bike Sale form an explicit IN QTY / OUT QTY pair around engine/chassis-identified units.",
+    "The system distinguishes generic incoming cash voucher entry from Bike-specific bill-balance collection.",
+    "Invoice/bill references are recurring accounting link surfaces across payment and receipt screens."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Used-bike buying may map to standard purchase/stock concepts plus vehicle master/serial identity, but seller-party semantics need clarification.",
+    "Cash Receive and Cash Balance Receive should later be compared with ERPNext Payment Entry/reference allocation rather than copied literally."
+  ]
+}
