@@ -1,0 +1,160 @@
+{
+  "batch_id": "BIKE-BATCH-08",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch proves registration is an operational workflow with chassis/engine tracking, letter/document statuses, agent handling and money receipt/payment fields—not merely an invoice charge.",
+  "images": [
+    {
+      "image_id": "BIKE-022",
+      "filename": "registration_form.png",
+      "sha256": "42678a208e660a6b396bb6213155f52e06e8615959aa884b5a1551f83f2c3330",
+      "screen_title": "REGISTRATION FORM",
+      "screen_type": "registration workflow tracker",
+      "confidence": "high",
+      "actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST RECORD",
+        "DELETE",
+        "BACK",
+        "DELETE CONFORM"
+      ],
+      "fields": [],
+      "columns": [
+        "Chassis no",
+        "Engine no",
+        "Date",
+        "Customer Name",
+        "Reg no",
+        "Letter",
+        "Letter Rec Date",
+        "Letter Del Date",
+        "Documents",
+        "Documents Rec Date",
+        "Documents Del Date",
+        "Documents Receive Name",
+        "Agent Name",
+        "Agent Date",
+        "Amount"
+      ],
+      "observed": [
+        "Registration is tracked per vehicle using chassis and engine number.",
+        "Registration number, letter status/dates, document status/dates, receiving person, agent and amount are tracked.",
+        "A status dropdown in the letter/document area visibly includes values such as RECEIVED, PENDING and delivery-related states.",
+        "One visible delivery-related value is DELIVERED TO CUSTOMER/DEALER; another visible state is DELIVERED TO EXC."
+      ],
+      "inferred": [
+        "The workflow tracks handoff of registration letters/documents between dealership, external authority/agent and customer/dealer."
+      ],
+      "unknowns": [
+        "Exact status field ownership for every dropdown option",
+        "Meaning of EXC",
+        "Required transition order",
+        "Whether Amount is charge/cost/receipt"
+      ]
+    },
+    {
+      "image_id": "BIKE-023",
+      "filename": "registration_form_2.png",
+      "sha256": "12ecc24482be914edca34f9adb55cb929b89fa6cabcfb633b32f45fdbbc47bbb",
+      "screen_title": "REGISTRATION FORM",
+      "screen_type": "same registration workflow with alternate dropdown expanded",
+      "confidence": "high",
+      "actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST RECORD",
+        "DELETE",
+        "BACK",
+        "DELETE CONFORM"
+      ],
+      "fields": [],
+      "columns": [
+        "Chassis no",
+        "Engine no",
+        "Date",
+        "Customer Name",
+        "Reg no",
+        "Letter",
+        "Letter Rec Date",
+        "Letter Del Date",
+        "Documents",
+        "Documents Rec Date",
+        "Documents Del Date",
+        "Documents Receive Name",
+        "Agent Name",
+        "Agent Date",
+        "Amount"
+      ],
+      "observed": [
+        "The Letter field visibly shows PENDING in the captured row.",
+        "A second status dropdown in the Documents area visibly exposes RECEIVED, DELIVERED and PENDING.",
+        "Letter and document tracking are separate concepts with their own dates."
+      ],
+      "inferred": [
+        "The two screenshots were likely captured specifically to show different status dropdowns/options."
+      ],
+      "unknowns": [
+        "Complete status lists",
+        "Automated date population",
+        "Whether statuses are enforced sequentially"
+      ]
+    },
+    {
+      "image_id": "BIKE-024",
+      "filename": "registration_recieve_voucher.png",
+      "sha256": "eeb6e763d32c8611371d864645a69bac16206243697e6a163f93bd27290868ef",
+      "screen_title": "REGISTRATION RECEIVED VOUCHER",
+      "screen_type": "registration financial receipt/payment voucher",
+      "confidence": "high",
+      "actions": [
+        "SAVE",
+        "ADD NEW",
+        "FIND",
+        "VIEW",
+        "LAST RECORD",
+        "DELETE",
+        "BACK"
+      ],
+      "fields": [
+        "Sr No",
+        "Ref Inv",
+        "Date",
+        "Total"
+      ],
+      "columns": [
+        "Rec From",
+        "Ac Name",
+        "Description",
+        "Reg. Rec",
+        "Reg. Pay"
+      ],
+      "observed": [
+        "Registration finance has dedicated received and paid amount columns.",
+        "Voucher can reference an invoice through Ref Inv.",
+        "Multiple lines and an overall total are supported."
+      ],
+      "inferred": [
+        "Registration profit can be derived from amounts received versus paid; later reports directly support this interpretation."
+      ],
+      "unknowns": [
+        "Whether Reg. Pay creates a payable/cash payment automatically",
+        "Invoice eligibility",
+        "Account selection semantics"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Registration has both operational document/agent tracking and a separate financial voucher.",
+    "The workflow is vehicle-specific via chassis/engine and separately tracks letter and document lifecycle.",
+    "The later Registration Profit reports are consistent with Reg. Rec versus Reg. Pay captured here."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Registration likely needs a dedicated workflow/custom DocType linked to the sold vehicle and customer, while its monetary effects should still use standard ERPNext accounting documents where possible."
+  ]
+}
