@@ -103,8 +103,8 @@
         },
         {
           "sequence": 8,
-          "filename": "booking.png",
-          "path": "client_old/software_images_bike/booking.png",
+          "filename": "cash_payment_voucher.png",
+          "path": "client_old/software_images_bike/cash_payment_voucher.png",
           "sha256": "122bdb2635beccd08c99ab1fd0102c30a3f2951263ad1d57f83d8b58c7344ab6",
           "bytes": 108691,
           "width": 1471,
