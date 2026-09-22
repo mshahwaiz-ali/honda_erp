@@ -18,7 +18,7 @@ import zipfile
 from pathlib import Path
 
 
-DEFAULT_INVENTORY = Path("docs/bike_erp_image_analysis/generated_inventory.json")
+DEFAULT_INVENTORY = Path("docs/bike_erp/01_legacy_evidence/image_analysis/generated_inventory.json")
 DEFAULT_OUTPUT_DIR = Path("review_batches/bike")
 
 
