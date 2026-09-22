@@ -1,0 +1,144 @@
+{
+  "batch_id": "BIKE-BATCH-15",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "The final batch resolves the FIFO report family and validates the rendered output for advance bookings in WAITING status.",
+  "images": [
+    {
+      "image_id": "BIKE-043",
+      "filename": "item_wise_fifo_report.png",
+      "sha256": "66ca2c7cebcaed791e906393407b6bca5543a212baa29553d658fcf300d9bdf9",
+      "screen_title": "ITEM WISE FIFO REPORT",
+      "screen_type": "item profitability/FIFO report view",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "RUN REPORT (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "Start Date",
+        "End Date",
+        "Item Code",
+        "adjacent item lookup/name field"
+      ],
+      "columns": [
+        "Sr No",
+        "Date",
+        "Name",
+        "Sale Qty",
+        "Sale Rate",
+        "Pur Rate",
+        "Total Sale",
+        "Total Pur",
+        "Profit Qty",
+        "Profit Amount"
+      ],
+      "observed": [
+        "The report can filter a specific item over a date range.",
+        "It exposes sale quantity/rate, purchase rate, total sale, total purchase and profit quantity/amount.",
+        "The report is explicitly labelled FIFO."
+      ],
+      "inferred": [
+        "FIFO cost layers may be used to derive purchase cost/profit, but the computation is not visible."
+      ],
+      "unknowns": [
+        "Meaning of Profit Qty",
+        "Exact FIFO layer algorithm",
+        "Handling of returns/adjustments"
+      ]
+    },
+    {
+      "image_id": "BIKE-044",
+      "filename": "item_wise_fifo_report_2.png",
+      "sha256": "691ef225cb0793696c01937f22e3af9799a4e853fae783e462945b6fdee40abf",
+      "screen_title": "ITEM WISE FIFO REPORT",
+      "screen_type": "stock movement/value FIFO view",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "RUN REPORT (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User"
+      ],
+      "columns": [
+        "Date",
+        "Item Name",
+        "Part No",
+        "In Qty",
+        "Out Qty",
+        "Stock",
+        "Rate",
+        "Value"
+      ],
+      "observed": [
+        "A second FIFO view reports stock movement and value rather than sales profit.",
+        "It contains in quantity, out quantity, remaining stock, rate and value.",
+        "Item Name and Part No are explicit columns."
+      ],
+      "inferred": [
+        "This may correspond to the Stock Value child entry seen under FIFO Reports, despite the screen title remaining Item Wise FIFO Report."
+      ],
+      "unknowns": [
+        "How this mode is selected",
+        "Whether Value equals Stock × Rate for each FIFO layer or aggregated item",
+        "Date/item filters may be outside the captured viewport or omitted"
+      ]
+    },
+    {
+      "image_id": "BIKE-045",
+      "filename": "report.png",
+      "sha256": "23b8a5f0910d91bf7fed722c5f9c66b04c75e3c3e40f1fc9d16840b6cdbf717b",
+      "screen_title": "Status : WAITING",
+      "screen_type": "rendered advance-booking report output",
+      "confidence": "high",
+      "actions": [],
+      "fields": [
+        "Status = WAITING"
+      ],
+      "columns": [
+        "Srno",
+        "Rec. Date",
+        "Issue Date",
+        "Cnic",
+        "Name",
+        "Cell No",
+        "Model",
+        "Acno",
+        "Amount"
+      ],
+      "observed": [
+        "This is a rendered output matching the Advance Booking Report field set.",
+        "The report is filtered to WAITING status.",
+        "Multiple waiting bookings are listed and an Amount total is shown.",
+        "Issue Date and Acno can be blank in visible rows.",
+        "The screenshot contains real customer identity/contact data; those values are intentionally not reproduced."
+      ],
+      "inferred": [
+        "Blank Issue Date is consistent with WAITING bookings not yet issued/completed."
+      ],
+      "unknowns": [
+        "Whether every waiting record must have blank Issue Date",
+        "Meaning of Acno",
+        "What event fills Issue Date"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "The FIFO family contains at least two distinct analytical views: profitability and stock movement/value.",
+    "Rendered booking output validates the in-app Advance Booking Report design and the WAITING status used on the booking form.",
+    "The final screenshot closes the evidence loop between Advance Booking entry, Advance Booking Report screen and rendered report output."
+  ],
+  "preliminary_erpnext_relevance": [
+    "ERPNext perpetual inventory/valuation should be the first source for FIFO stock value and profit calculations; recreate only dealership-specific presentation gaps.",
+    "Booking remains a likely custom workflow because its waiting/issue lifecycle is not a standard sales document by itself."
+  ]
+}
