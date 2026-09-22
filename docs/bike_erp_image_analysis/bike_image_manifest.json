@@ -64,8 +64,8 @@
         },
         {
           "image_id": "BIKE-008",
-          "source_image": "client_old/software_images_bike/booking.png",
-          "filename": "booking.png",
+          "source_image": "client_old/software_images_bike/cash_payment_voucher.png",
+          "filename": "cash_payment_voucher.png",
           "status": "analyzed"
         },
         {
