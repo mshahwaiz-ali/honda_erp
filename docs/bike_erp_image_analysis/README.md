@@ -94,3 +94,12 @@ Batches 01 and 02 have been manually reviewed at full resolution. The inventory/
 The per-batch ZIP exporter is **not part of the durable evidence format**. It was only a transport helper for getting binary screenshots into visual review. Reports are stored directly under `docs/bike_erp_image_analysis/batches/` as Markdown + JSON.
 
 For the remaining Bike screenshots, the efficient workflow is to provide the remaining source images once, then analyze them internally in 3-image logical batches and write the reports directly to this folder. No separate ZIP needs to be retained in the repository.
+## Completion status
+
+- Bike screenshots analyzed: **45 / 45**
+- Logical batches analyzed: **15 / 15**
+- Per-batch Markdown reports: **15**
+- Per-batch JSON evidence files: **15**
+- Consolidated/refined evidence: stored under `refined/`
+
+All Bike screenshots have now been manually reviewed at full resolution. The refined document is the preferred evidence source for later ERPNext planning; the batch files remain the traceable screenshot-level record.
