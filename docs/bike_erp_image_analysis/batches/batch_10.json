@@ -1,0 +1,154 @@
+{
+  "batch_id": "BIKE-BATCH-10",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch proves the operational report dimensions used for retail sales, dealer sales and available vehicle stock. The reports consistently preserve model/colour and vehicle-unit identifiers.",
+  "images": [
+    {
+      "image_id": "BIKE-028",
+      "filename": "daily_cash_sale_report.png",
+      "sha256": "9dead4c64d4eb945faea6377149402353d74ea0d47fe39c62112333bb3bd4886",
+      "screen_title": "DAILY CASH SALE REPORT",
+      "screen_type": "cash-sale operational report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date",
+        "MODEL",
+        "COLOUR"
+      ],
+      "columns": [
+        "Inv No",
+        "Ref No",
+        "Date",
+        "CNIC",
+        "Coustomer Name",
+        "Cell No",
+        "Item Name",
+        "Colour",
+        "Chassis No",
+        "Amount"
+      ],
+      "observed": [
+        "Cash sales can be filtered by date range, model and colour.",
+        "Report includes invoice/reference identifiers, customer identity/contact, item/model, colour, chassis and amount.",
+        "Engine number is not visible in this particular cash-sale report grid."
+      ],
+      "inferred": [
+        "The report is intended for daily/period retail bike-sale tracking rather than full accounting detail."
+      ],
+      "unknowns": [
+        "Whether all sale lines appear or one row per invoice",
+        "Treatment of multi-bike invoices",
+        "Tax/discount columns are not shown here"
+      ]
+    },
+    {
+      "image_id": "BIKE-029",
+      "filename": "dealer_sale_report.png",
+      "sha256": "ca17b605dde69bf1ab42338ad63574ea57b7f8d9460d3daa991626b307409917",
+      "screen_title": "DEALER SALE REPORT",
+      "screen_type": "dealer sales report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date",
+        "DEALERS"
+      ],
+      "columns": [
+        "Comp No",
+        "Reg No",
+        "Date",
+        "A/C Name",
+        "Model No",
+        "Colour",
+        "Chassis No",
+        "Engine No",
+        "Amount"
+      ],
+      "observed": [
+        "Dealer sales can be filtered by dealer and date range.",
+        "Account name, model, colour, chassis, engine and amount are reported.",
+        "Comp No and Reg No are explicit report columns."
+      ],
+      "inferred": [
+        "Comp No may represent company/commission/complaint or another internal identifier; the screenshot does not define it."
+      ],
+      "unknowns": [
+        "Meaning of Comp No",
+        "Meaning/source of Reg No",
+        "Whether Amount is gross or net"
+      ]
+    },
+    {
+      "image_id": "BIKE-030",
+      "filename": "engine_wise_stock_report.png",
+      "sha256": "be94949013860d9687b01d628ba307e5786471daad3ae7428af1e83291110eca",
+      "screen_title": "ENGINE WISE STOCK REPORT",
+      "screen_type": "vehicle-unit stock report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "ONLY 30-JUN STOCK",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "Model",
+        "Colour"
+      ],
+      "columns": [
+        "Catagory",
+        "Brand",
+        "Chassic No",
+        "Engine No",
+        "Amount"
+      ],
+      "observed": [
+        "Available stock is reportable at chassis/engine-unit level.",
+        "Model and colour filters are provided.",
+        "Category, brand, chassis, engine and amount are the visible stock dimensions.",
+        "A special ONLY 30-JUN STOCK action exists with an adjacent Generate Sheet action."
+      ],
+      "inferred": [
+        "The 30-Jun-specific view may support fiscal year-end stock reporting/valuation."
+      ],
+      "unknowns": [
+        "Meaning of Amount in stock report",
+        "30-Jun calculation basis",
+        "Whether sold/reserved units are excluded",
+        "Warehouse dimension is absent"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Cash-sale, dealer-sale and stock reports all retain vehicle-unit identity, confirming chassis/engine tracking is central to the Bike system.",
+    "Dealer Sale report includes both chassis and engine; Cash Sale report exposes chassis but not engine in this view.",
+    "The dedicated 30-Jun stock action is likely a statutory/year-end operational reporting requirement and should be investigated before replacement."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Standard ERPNext serial-number/stock reporting should be evaluated for chassis/engine tracking.",
+    "Custom reports may still be needed for dealership-specific filters and year-end stock formats."
+  ]
+}
