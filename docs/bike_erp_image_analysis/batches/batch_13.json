@@ -1,0 +1,138 @@
+{
+  "batch_id": "BIKE-BATCH-13",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch covers balance-oriented reporting. One screen has a title/content mismatch that must be preserved as evidence rather than normalized away.",
+  "images": [
+    {
+      "image_id": "BIKE-037",
+      "filename": "cash_balance_report.png",
+      "sha256": "bc36dfc7fcb9621d33a9c6a9d603c2fe95c9713b65e0a11cfcdd9dbe00b2d14a",
+      "screen_title": "CASH BALANCE REPORT",
+      "screen_type": "balance/profit-style report with registration columns",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date"
+      ],
+      "columns": [
+        "Bill No",
+        "Name",
+        "Cell No",
+        "Reg Receive",
+        "Reg Pay",
+        "Net Profit"
+      ],
+      "observed": [
+        "Despite the title CASH BALANCE REPORT, the visible grid is registration-style: Reg Receive, Reg Pay and Net Profit.",
+        "Bill number, party name and cell number are also included."
+      ],
+      "inferred": [
+        "The screen may be misnamed, reused, or represent a specialized registration/cash-balance report."
+      ],
+      "unknowns": [
+        "Why title and columns differ",
+        "Whether this is the report for Cash Balance Receive (Bike)",
+        "Profit formula"
+      ]
+    },
+    {
+      "image_id": "BIKE-038",
+      "filename": "cash_book_report.png",
+      "sha256": "f83058fa0d0181581af0ccd23f954d1f707b64fec58855c4820619b36517b0d5",
+      "screen_title": "CASH BOOK REPORT",
+      "screen_type": "interactive cash-book report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date"
+      ],
+      "columns": [
+        "Date",
+        "Sr No",
+        "Nerration",
+        "Status",
+        "Debit",
+        "Credit",
+        "Balanace"
+      ],
+      "observed": [
+        "Cash Book Report exposes date, serial number, narration, status, debit, credit and balance.",
+        "Debit and credit totals are visible at the bottom.",
+        "Legacy spelling in labels is preserved as observed."
+      ],
+      "inferred": [],
+      "unknowns": [
+        "Account selector is not visible here",
+        "Status-code mapping"
+      ]
+    },
+    {
+      "image_id": "BIKE-039",
+      "filename": "all_balabnce_summary_report.png",
+      "sha256": "0977db8635ccd612c473c135d3db931f8cfd65b2b224978b6a85dd2ed19ba512",
+      "screen_title": "ALL BALANCE & SUMMARY REPORT",
+      "screen_type": "account/party balance summary",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date",
+        "Head Name"
+      ],
+      "columns": [
+        "Id Ac",
+        "Name",
+        "Area",
+        "Opb",
+        "Debit",
+        "Credit",
+        "Balance"
+      ],
+      "observed": [
+        "The report summarizes accounts/heads with area, opening balance, debit, credit and closing/current balance.",
+        "Head Name is a filter.",
+        "Bottom totals are visible for financial columns."
+      ],
+      "inferred": [
+        "Opb likely means opening balance."
+      ],
+      "unknowns": [
+        "Which Head types are included",
+        "Area source",
+        "Whether zero-balance heads are excluded"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Balance reporting uses the same Head/account concepts observed in the Head master and Account Ledger.",
+    "The Cash Balance Report title/content mismatch is a concrete legacy inconsistency; replacement requirements should be based on business need, not legacy naming alone."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Standard ERPNext General Ledger, Trial Balance, Party Ledger and Receivable/Payable reporting should be evaluated before custom balance reports are recreated."
+  ]
+}
