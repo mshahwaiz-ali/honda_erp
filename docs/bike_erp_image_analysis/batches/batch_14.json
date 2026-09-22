@@ -1,0 +1,135 @@
+{
+  "batch_id": "BIKE-BATCH-14",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch contains some of the strongest architectural evidence. The Daily Transaction output consolidates several transaction classes, while the General Ledger shows sales and cash-receipt entries with vehicle quantities and running financial balances.",
+  "images": [
+    {
+      "image_id": "BIKE-040",
+      "filename": "daily_transection_report.png",
+      "sha256": "6e264f22c068d5858c9caa1a0ee5532e7387b6b17ec633c743289c8a1c3a613d",
+      "screen_title": "DAILY TRANSACTION",
+      "screen_type": "rendered consolidated daily transaction report",
+      "confidence": "high",
+      "actions": [],
+      "fields": [
+        "From Date",
+        "To Date"
+      ],
+      "columns": [
+        "Multiple section-specific column sets"
+      ],
+      "observed": [
+        "The rendered report is sectioned by transaction type.",
+        "Visible sections include Purchase, Market Purchase, Parts Sale Invoice, Cash Sale Invoice Bike, Dealers Sale Invoice Bike, and a payment-style section at the bottom.",
+        "Purchase/Market Purchase sections carry invoice/type/delivery/P.O-or-godown/item/brand/quantity/rate/net dimensions.",
+        "Cash Sale Invoice Bike carries customer detail, type, item code/name, brand, quantity, sale rate and net/received-amount style fields.",
+        "Dealers Sale Invoice Bike carries customer detail, type, chassis number, registration number, item code/name, quantity, sale rate and net amount.",
+        "A payment row shows Type PAY and Payment Type CLEAR in the captured output.",
+        "The screenshot contains real party names/details; they are intentionally not reproduced here."
+      ],
+      "inferred": [
+        "The report acts as a consolidated daily activity journal across operational modules.",
+        "Parts-related sections appearing in Bike evidence may indicate shared reporting, overlapping functionality, or a combined source; it does not by itself prove the two legacy systems shared accounting/database."
+      ],
+      "unknowns": [
+        "Exact data-source boundary between Bike and Parts",
+        "Meaning of every section-specific field",
+        "Whether report includes all transaction types",
+        "Why purchase and market purchase are separate"
+      ]
+    },
+    {
+      "image_id": "BIKE-041",
+      "filename": "expense_sumary_report.png",
+      "sha256": "1d501e21d71930e7e6024c65e9e5cb397334959fc6af0f5b09ca564aa8a26d54",
+      "screen_title": "EXPENSE SUMMARY REPORT",
+      "screen_type": "expense-by-account/head summary",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date",
+        "Head Name"
+      ],
+      "columns": [
+        "Id Ac",
+        "Name",
+        "Amount"
+      ],
+      "observed": [
+        "Expenses can be summarized by account/head over a date range.",
+        "Head Name is an optional filter.",
+        "Account ID, name and amount are reported."
+      ],
+      "inferred": [],
+      "unknowns": [
+        "Which account groups qualify as expense",
+        "Whether amount is debit net of credits"
+      ]
+    },
+    {
+      "image_id": "BIKE-042",
+      "filename": "GL.png",
+      "sha256": "4b577f3803436ca3e79770015782c5cedecd12d44029a7507f6355dc4b3ca3ad",
+      "screen_title": "General Ledger",
+      "screen_type": "rendered account general ledger",
+      "confidence": "high",
+      "actions": [],
+      "fields": [
+        "A/c code and account name",
+        "FROM DATE",
+        "TO DATE",
+        "report date/page"
+      ],
+      "columns": [
+        "DATE",
+        "SRNO",
+        "REF NO",
+        "STATUS",
+        "DESCRIPTION",
+        "ENG NO",
+        "CH NO",
+        "IN",
+        "OUT",
+        "RATE",
+        "DEBIT",
+        "CREDIT",
+        "BALANCE"
+      ],
+      "observed": [
+        "The ledger mixes financial debit/credit/balance with engine/chassis, in/out quantity and rate.",
+        "Visible sample statuses include SALE and C/R.",
+        "Visible sample descriptions include CASH, CHEQUE CLEAR and DISCOUNT.",
+        "Running balance changes across sales and receipts are visible.",
+        "The screenshot contains real account/party information; values are not repeated here."
+      ],
+      "inferred": [
+        "C/R likely denotes cash receipt, consistent with Cash Receive Voucher.",
+        "Operational sales and receipt documents feed a common account ledger/reporting layer."
+      ],
+      "unknowns": [
+        "Full status mapping",
+        "Whether discounts post through separate receipt/journal lines",
+        "Exact source-document linkage"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Daily Transaction demonstrates a consolidated reporting surface across purchase, parts sale, bike cash sale, bike dealer sale and payment activity.",
+    "General Ledger confirms that sale and receipt activity converge into debit/credit running balances.",
+    "The evidence strongly supports using ERPNext's native accounting ledger as the replacement backbone rather than reproducing this legacy ledger engine."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Daily Transaction can later become a consolidated query/report across standard ERPNext documents and any verified custom workflow records.",
+    "Expense Summary and GL should primarily use ERPNext accounting data."
+  ]
+}
