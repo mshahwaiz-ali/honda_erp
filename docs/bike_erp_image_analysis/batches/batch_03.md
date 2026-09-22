@@ -5,10 +5,10 @@
 | Image ID | Source | Actual visible screen |
 |---|---|---|
 | BIKE-007 | `dealer_customer.png` | `DEALER CUSTOMER` |
-| BIKE-008 | `booking.png` | `CASH PAYMENT VOUCHER` |
+| BIKE-008 | `cash_payment_voucher.png` | `CASH PAYMENT VOUCHER` |
 | BIKE-009 | `advance_booking_customer.png` | `ADVANCE BOOKING CUSTOMER` |
 
-> Important evidence-quality finding: **`booking.png` is not a booking form.** Its visible screen title is `CASH PAYMENT VOUCHER`. File names are therefore useful inventory labels but are not trusted as the business truth; the visible UI remains authoritative.
+> Evidence capture filename corrected to `cash_payment_voucher.png` because the visible screen title is `CASH PAYMENT VOUCHER`. The screenshot UI is the authoritative source for screen identity.
 
 ---
 
@@ -106,7 +106,7 @@ This screen is likely related to the former, but the exact distinction between D
 
 ---
 
-# BIKE-008 — `booking.png`
+# BIKE-008 — `cash_payment_voucher.png`
 
 ## Screen classification
 
@@ -114,15 +114,9 @@ This screen is likely related to the former, but the exact distinction between D
 - **Type:** accounting/payment voucher
 - **Confidence:** high
 
-## Critical filename correction
+## Source identification
 
-The source filename is `booking.png`, but the screenshot visibly shows **CASH PAYMENT VOUCHER**.
-
-For all later reconstruction:
-
-- source filename is retained for traceability
-- screen title/content is treated as authoritative
-- no booking-form behavior will be inferred from this filename
+The screenshot filename now matches the visible screen title: **CASH PAYMENT VOUCHER**.
 
 ## Visible actions
 
