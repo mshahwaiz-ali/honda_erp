@@ -9,7 +9,7 @@ This document is the consolidated business picture extracted from the legacy Bik
 Source-of-truth hierarchy:
 
 1. original screenshots under `client_old/software_images_bike/`
-2. per-batch evidence under `docs/bike_erp_image_analysis/batches/`
+2. per-batch evidence under `docs/bike_erp/01_legacy_evidence/image_analysis/batches/`
 3. this refined consolidation
 
 Where the evidence is incomplete, the gap is stated explicitly rather than filled with assumptions.
@@ -1303,7 +1303,7 @@ Therefore:
 
 # 26. Evidence anomalies and cautions
 
-1. `booking.png` actually shows **CASH PAYMENT VOUCHER**.
+1. Evidence-capture filenames are normalized to the visible screen title where a capture was named incorrectly; this is a capture-file issue, not a legacy-system anomaly.
 2. `CASH BALANCE REPORT` displays registration receive/pay/profit columns.
 3. Bike-side reports expose parts/part-number activity.
 4. Different report variants share the same title while exposing different data.
