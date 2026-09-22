@@ -4,7 +4,7 @@
   "analysis_status": "analyzed",
   "analysis_method": "manual full-resolution visual review",
   "source_count": 3,
-  "evidence_quality_note": "Source filenames are not authoritative for screen identity. BIKE-008 is named booking.png but visibly shows CASH PAYMENT VOUCHER.",
+  "evidence_quality_note": "Source screenshot filename has been corrected to cash_payment_voucher.png based on the visible screen title CASH PAYMENT VOUCHER. Visible UI remains authoritative.",
   "images": [
     {
       "image_id": "BIKE-007",
@@ -62,7 +62,7 @@
     },
     {
       "image_id": "BIKE-008",
-      "source_image": "client_old/software_images_bike/booking.png",
+      "source_image": "client_old/software_images_bike/cash_payment_voucher.png",
       "sha256": "122bdb2635beccd08c99ab1fd0102c30a3f2951263ad1d57f83d8b58c7344ab6",
       "analysis_status": "analyzed",
       "screen_title": "CASH PAYMENT VOUCHER",
