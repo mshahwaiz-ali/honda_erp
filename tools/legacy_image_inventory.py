@@ -165,12 +165,12 @@ def main() -> None:
     )
     parser.add_argument(
         "--manifest",
-        default="docs/bike_erp_image_analysis/bike_image_manifest.json",
+        default="docs/bike_erp/01_legacy_evidence/image_analysis/bike_image_manifest.json",
         help="Logical screenshot review manifest.",
     )
     parser.add_argument(
         "--output",
-        default="docs/bike_erp_image_analysis/generated_inventory.json",
+        default="docs/bike_erp/01_legacy_evidence/image_analysis/generated_inventory.json",
         help="JSON output path.",
     )
     parser.add_argument("--batch-size", type=int, default=3)
