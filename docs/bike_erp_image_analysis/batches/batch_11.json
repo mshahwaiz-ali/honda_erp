@@ -1,0 +1,138 @@
+{
+  "batch_id": "BIKE-BATCH-11",
+  "system": "bike",
+  "analysis_status": "analyzed",
+  "analysis_method": "manual full-resolution visual review",
+  "summary": "This batch proves multiple profitability views: unit-level bike profit with engine/chassis, a second item/part-number profit view, and a date-wise profit report launcher.",
+  "images": [
+    {
+      "image_id": "BIKE-031",
+      "filename": "bike_profit_report.png",
+      "sha256": "83527b3bfea4d52bc6034f5dfc0877210b7b540e9d39cacc7a23ce54b7c5e1cc",
+      "screen_title": "BIKE PROFIT REPORT",
+      "screen_type": "vehicle-level profitability report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date"
+      ],
+      "columns": [
+        "Sr No",
+        "Date",
+        "Type",
+        "Item Name",
+        "Eng No",
+        "Ch No",
+        "Sale Rate",
+        "Pur Rate",
+        "Qty",
+        "Discount",
+        "Profit Pcs",
+        "Net Profit"
+      ],
+      "observed": [
+        "Profitability is reported using sale rate, purchase rate, quantity, discount, profit pieces and net profit.",
+        "Engine and chassis numbers are retained in the profit report.",
+        "A transaction Type dimension is visible."
+      ],
+      "inferred": [
+        "Net profit likely derives from sale versus purchase value adjusted by discount, but exact formula is not shown."
+      ],
+      "unknowns": [
+        "Definition of Profit Pcs",
+        "Cost source/Pur Rate source",
+        "Treatment of taxes and registration charges",
+        "Type values"
+      ]
+    },
+    {
+      "image_id": "BIKE-032",
+      "filename": "bike_profit_report2.png",
+      "sha256": "f9ddd7990b9daf2fb0f8eb193dc520e81535513fddc54c7f20cc413d1c9ac236",
+      "screen_title": "BIKE PROFIT REPORT",
+      "screen_type": "alternate item-level profitability report",
+      "confidence": "high",
+      "actions": [
+        "REFRESH",
+        "REPORT RUN (RDF)",
+        "GENERATE SHEET",
+        "BACK"
+      ],
+      "fields": [
+        "Branch",
+        "User",
+        "From Date",
+        "To Date"
+      ],
+      "columns": [
+        "Sr No",
+        "Date",
+        "Name",
+        "Item Name",
+        "Part No",
+        "Qty",
+        "Total Sale",
+        "Total Pur",
+        "Net Profit"
+      ],
+      "observed": [
+        "A second Bike Profit Report variant summarizes item/part-number profitability.",
+        "It reports quantity, total sale, total purchase and net profit.",
+        "A Name column is present in addition to Item Name and Part No."
+      ],
+      "inferred": [
+        "This may be an item/parts-oriented profit view used from within the Bike application/report catalogue."
+      ],
+      "unknowns": [
+        "Meaning of Name",
+        "Why Part No is present in Bike Profit Report",
+        "Whether this report includes spare parts, service items, or all inventory"
+      ]
+    },
+    {
+      "image_id": "BIKE-033",
+      "filename": "data_wise_profit_report_1.png",
+      "sha256": "984ef577575a7d693d44cd429670faf7529e6bbf9c19e7b59e48956b14d8e1bf",
+      "screen_title": "DATE WISE PROFIT REPORT",
+      "screen_type": "report parameter/launcher form",
+      "confidence": "high",
+      "actions": [
+        "RUN REPORT",
+        "EXIT FORM"
+      ],
+      "fields": [
+        "FROM DATE",
+        "TO DATE",
+        "ADMIN",
+        "REHMAN HONDA"
+      ],
+      "columns": [],
+      "observed": [
+        "Date Wise Profit Report has a simple date-range launcher separate from the rendered output.",
+        "The next batch contains the rendered result for this report."
+      ],
+      "inferred": [],
+      "unknowns": [
+        "Whether additional hidden parameters exist",
+        "Exact data source until output is reviewed"
+      ]
+    }
+  ],
+  "cross_image_findings": [
+    "Profit reporting exists at both vehicle-unit and item/part-number levels.",
+    "The system retains explicit purchase-rate/cost information in profit reporting rather than showing only revenue.",
+    "Batch 12 output is required to understand what Date Wise Profit actually contains."
+  ],
+  "preliminary_erpnext_relevance": [
+    "Profitability should ultimately be derived from ERPNext stock valuation/accounting where possible rather than storing independent profit fields.",
+    "Legacy report layouts can be recreated only after agreeing which profit definitions remain business requirements."
+  ]
+}
